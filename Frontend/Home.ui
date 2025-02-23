@@ -210,7 +210,7 @@ QToolButton:hover{
 }</string>
             </property>
             <property name="text">
-             <string>         HOME</string>
+             <string>           HOME</string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">
@@ -587,8 +587,11 @@ QFrame:hover{
 
 }</string>
          </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
          <property name="currentIndex">
-          <number>3</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -654,7 +657,7 @@ QFrame:hover{
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
-                  <height>300</height>
+                  <height>250</height>
                  </size>
                 </property>
                 <property name="maximumSize">
@@ -816,6 +819,12 @@ Keeping tails wagging and hearts happy!</string>
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">QFrame{
 	background:transparent;
@@ -882,7 +891,7 @@ Keeping tails wagging and hearts happy!</string>
                    </property>
                    <property name="minimumSize">
                     <size>
-                     <width>340</width>
+                     <width>0</width>
                      <height>300</height>
                     </size>
                    </property>
@@ -898,7 +907,7 @@ Keeping tails wagging and hearts happy!</string>
 	color: #272727;
 }
 QTableWidget::item {
-	padding:20px;
+	padding:30px;
 	margin-bottom:15px;
 	background-color: #EFEFEF;
 }
@@ -974,8 +983,14 @@ QScrollBar::sub-page:vertical {
                    <property name="dragDropOverwriteMode">
                     <bool>false</bool>
                    </property>
+                   <property name="verticalScrollMode">
+                    <enum>QAbstractItemView::ScrollPerPixel</enum>
+                   </property>
                    <property name="showGrid">
                     <bool>false</bool>
+                   </property>
+                   <property name="gridStyle">
+                    <enum>Qt::NoPen</enum>
                    </property>
                    <property name="sortingEnabled">
                     <bool>false</bool>

@@ -1,6 +1,4 @@
 from PyQt6.QtWidgets import QMainWindow, QApplication, QHeaderView, QFrame, QTableWidgetItem
-from PyQt6.QtCore import Qt, QObject, QEvent
-from PyQt6.QtGui import QFont, QFontDatabase
 from PyQt6 import uic
 from PyQt6.QtCore import Qt
 import resource
@@ -13,9 +11,7 @@ class MainUI(QMainWindow):
 
         #HOME TABLE
         self.upcoming_appointment.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
-        self.upcoming_appointment.verticalHeader().setVisible(False)
-        self.upcoming_appointment.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
-
+        self.upcoming_appointment.verticalHeader().setDefaultSectionSize(100)  # Set row height to 40px
 
         # Insert Test Data
         self.insert_data([
@@ -31,9 +27,12 @@ class MainUI(QMainWindow):
             ["Francis Jerusalem", "09121212121", "03", "2:00PM", "Grooming"],
         ])
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(0)
 
         self.homeBtn.clicked.connect(lambda: self.navigate_to_page(0))
+        self.addPatientBtn.clicked.connect(lambda: self.navigate_to_page(1))
+        self.petRecordsBtn.clicked.connect(lambda: self.navigate_to_page(2))
+        self.appointmentBtn.clicked.connect(lambda: self.navigate_to_page(3))
 
     def navigate_to_page(self, index):
         self.stackedWidget.setCurrentIndex(index)
