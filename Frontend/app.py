@@ -1,4 +1,5 @@
-from PyQt6.QtWidgets import QMainWindow, QApplication, QHeaderView, QTableWidgetItem
+from PyQt6.QtWidgets import QMainWindow, QApplication, QHeaderView, QFrame, QTableWidgetItem
+from PyQt6.QtCore import Qt, QObject, QEvent
 from PyQt6.QtGui import QFont, QFontDatabase
 from PyQt6 import uic
 from PyQt6.QtCore import Qt
@@ -29,6 +30,15 @@ class MainUI(QMainWindow):
             ["Francis Jerusalem", "09121212121", "03", "2:00PM", "Grooming"],
             ["Francis Jerusalem", "09121212121", "03", "2:00PM", "Grooming"],
         ])
+
+        self.stackedWidget.setCurrentIndex(3)
+
+        self.homeBtn.clicked.connect(lambda: self.navigate_to_page(0))
+
+    def navigate_to_page(self, index):
+        self.stackedWidget.setCurrentIndex(index)
+
+    #Insert sa table
     def insert_data(self, data):
 
         self.upcoming_appointment.setRowCount(len(data))
