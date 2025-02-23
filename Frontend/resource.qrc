@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>Icons/AddIcon.png</file>
+    <file>Icons/AddRemarksIcon.png</file>
+    <file>Icons/AppointmentIcon.png</file>
+    <file>Icons/DeleteIcon.png</file>
+    <file>Icons/home.png</file>
+    <file>Icons/logOutIcon.png</file>
+    <file>Icons/petDetailsIcon.png</file>
+    <file>Icons/printIcon.png</file>
+    <file>Icons/RecordsIcon.png</file>
+    <file>Icons/UpdateIcon.png</file>
+    <file>Icons/UserIcon.png</file>
+  </qresource>
+  <qresource prefix="Images">
+    <file>image/desktopIcon.png</file>
+    <file>image/image 1.png</file>
+    <file>image/navImg.png</file>
+    <file>image/petmateLogo.png</file>
+  </qresource>
+</RCC>
