@@ -197,7 +197,7 @@
 }
 
 QFrame:hover{
-	background-color: #FCD597;
+	background-color: rgb(255, 241, 206);
 }</string>
             </property>
             <property name="frameShape">
@@ -264,7 +264,7 @@ QFrame:hover{
 }
 
 QFrame:hover{
-	background-color: #FCD597;
+	background-color: rgb(255, 241, 206);
 }</string>
             </property>
             <property name="frameShape">
@@ -331,7 +331,7 @@ QFrame:hover{
 }
 
 QFrame:hover{
-	background-color: #FCD597;
+	background-color: rgb(255, 241, 206);
 }</string>
             </property>
             <property name="frameShape">
@@ -392,7 +392,7 @@ QFrame:hover{
 }
 
 QFrame:hover{
-	background-color: #FCD597;
+	background-color: rgb(255, 241, 206);
 }</string>
             </property>
             <property name="frameShape">
@@ -537,7 +537,7 @@ QFrame:hover{
 }
 
 QFrame:hover{
-	background-color: #FCD597;
+	background-color: rgb(255, 241, 206);
 }</string>
          </property>
          <property name="frameShape">
