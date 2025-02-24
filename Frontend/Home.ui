@@ -540,7 +540,7 @@ QToolButton:hover{
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="styleSheet">
           <string notr="true">QStackedWidget{
-	background:red;
+	background:transparent;
 
 }</string>
          </property>
@@ -548,7 +548,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -811,7 +811,7 @@ Keeping tails wagging and hearts happy!</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>1400</width>
+                     <width>735</width>
                      <height>62</height>
                     </size>
                    </property>
@@ -1041,7 +1041,7 @@ QScrollBar::sub-page:vertical {
             <widget class="QFrame" name="frame_2">
              <property name="styleSheet">
               <string notr="true">QFrame{
-	background:white;
+	background:transparent;
 
 }</string>
              </property>
@@ -1067,7 +1067,7 @@ QScrollBar::sub-page:vertical {
               <property name="bottomMargin">
                <number>0</number>
               </property>
-              <item>
+              <item alignment="Qt::AlignHCenter">
                <widget class="QStackedWidget" name="AddpatientStack">
                 <property name="currentIndex">
                  <number>0</number>
@@ -1078,8 +1078,14 @@ QScrollBar::sub-page:vertical {
                    <widget class="QFrame" name="frame_3">
                     <property name="minimumSize">
                      <size>
-                      <width>530</width>
-                      <height>0</height>
+                      <width>735</width>
+                      <height>62</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>735</width>
+                      <height>62</height>
                      </size>
                     </property>
                     <property name="styleSheet">
@@ -1107,7 +1113,7 @@ QScrollBar::sub-page:vertical {
 }</string>
                        </property>
                        <property name="text">
-                        <string>WELCOME USER</string>
+                        <string>WELCOME, USER</string>
                        </property>
                       </widget>
                      </item>
@@ -1147,6 +1153,16 @@ QScrollBar::sub-page:vertical {
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
+                    <widget class="QLineEdit" name="lineEdit">
+                     <property name="geometry">
+                      <rect>
+                       <x>70</x>
+                       <y>80</y>
+                       <width>113</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                    </widget>
                    </widget>
                   </item>
                  </layout>
