@@ -1075,506 +1075,916 @@ QScrollBar::sub-page:vertical {
                 <widget class="QWidget" name="page">
                  <layout class="QVBoxLayout" name="verticalLayout_9">
                   <item>
-                   <widget class="QFrame" name="frame_3">
-                    <property name="minimumSize">
-                     <size>
-                      <width>735</width>
-                      <height>62</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>735</width>
-                      <height>62</height>
-                     </size>
-                    </property>
+                   <widget class="QScrollArea" name="scrollArea">
                     <property name="styleSheet">
-                     <string notr="true">QFrame{
+                     <string notr="true">QScrollBar:vertical {
+    border: none;
+    background: white; 
+    width: 8px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #81BFDA; /* Scrollbar color */
+    max-height: 15px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #2980b9; 
+}
+
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical, 
+QScrollBar::up-arrow:vertical, 
+QScrollBar::down-arrow:vertical, 
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical {
+    background: none;
+    height: 0px;
+}</string>
+                    </property>
+                    <property name="widgetResizable">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="scrollAreaWidgetContents_5">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>-188</y>
+                       <width>815</width>
+                       <height>820</height>
+                      </rect>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_27">
+                      <item alignment="Qt::AlignHCenter">
+                       <widget class="QFrame" name="frame_4">
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_28">
+                         <item>
+                          <widget class="QFrame" name="frame_3">
+                           <property name="minimumSize">
+                            <size>
+                             <width>735</width>
+                             <height>62</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>735</width>
+                             <height>62</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QFrame{
 	border:none;
 	border-radius:10px;
 	background-color: #81BFDA;
 
 }</string>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout">
-                     <item>
-                      <widget class="QLabel" name="label_3">
-                       <property name="styleSheet">
-                        <string notr="true">QLabel{
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QHBoxLayout" name="horizontalLayout">
+                            <property name="rightMargin">
+                             <number>20</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_3">
+                              <property name="styleSheet">
+                               <string notr="true">QLabel{
 	color:black;
 	font: 81 26pt &quot;Montserrat ExtraBold&quot;;
 	qproperty-alignment: AlignCenter;
 }</string>
-                       </property>
-                       <property name="text">
-                        <string>WELCOME, USER</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_2">
-                       <property name="minimumSize">
-                        <size>
-                         <width>30</width>
-                         <height>30</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>30</width>
-                         <height>30</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="pixmap">
-                        <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
-                       </property>
-                       <property name="scaledContents">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QFrame" name="DetailsInput">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
-                    </property>
-                    <layout class="QGridLayout" name="gridLayout_3">
-                     <item row="0" column="0" colspan="2">
-                      <widget class="QFrame" name="frame_9">
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_17">
-                        <property name="spacing">
-                         <number>0</number>
+                              </property>
+                              <property name="text">
+                               <string>WELCOME, USER</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="label_2">
+                              <property name="minimumSize">
+                               <size>
+                                <width>30</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>30</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                              <property name="text">
+                               <string/>
+                              </property>
+                              <property name="pixmap">
+                               <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                              </property>
+                              <property name="scaledContents">
+                               <bool>true</bool>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item alignment="Qt::AlignHCenter">
+                       <widget class="QFrame" name="DetailsInput">
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+	color:balack;
+}
+QLineEdit{
+	border:none;
+	border-radius: 15px;
+	border:2px solid #81BFDA;
+	background-color: rgb(254, 254, 254)
+
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
+}</string>
                         </property>
-                        <property name="leftMargin">
-                         <number>0</number>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
                         </property>
-                        <property name="topMargin">
-                         <number>0</number>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
                         </property>
-                        <property name="bottomMargin">
-                         <number>0</number>
-                        </property>
-                        <item>
-                         <widget class="QLabel" name="label_14">
-                          <property name="styleSheet">
-                           <string notr="true">font: 87 12pt &quot;Montserrat Black&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>BASIC INFORMATION</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="5" column="0">
-                      <widget class="QFrame" name="BreedFrame">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_20">
-                        <item>
-                         <widget class="QLabel" name="label_18">
-                          <property name="styleSheet">
-                           <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>Breed</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="Breed">
-                          <property name="minimumSize">
-                           <size>
-                            <width>330</width>
-                            <height>49</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLineEdit{
+                        <layout class="QGridLayout" name="gridLayout_4">
+                         <item row="0" column="0">
+                          <widget class="QFrame" name="frame_9">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_17">
+                            <property name="spacing">
+                             <number>0</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_14">
+                              <property name="styleSheet">
+                               <string notr="true">font: 87 12pt &quot;Montserrat Black&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>BASIC INFORMATION</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QFrame" name="FirstNameFrame">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_13">
+                            <item>
+                             <widget class="QLabel" name="label_4">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>First Name</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="FirstName">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
+	border:none;
+	border-radius: 15px;
+	border:2px solid #81BFDA;
+	background-color: rgb(254, 254, 254);
+
+}
+QLineEdit:focus{
+	background-color:rgb(230, 230, 230)
+}</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QFrame" name="LastNameFrame">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_14">
+                            <item>
+                             <widget class="QLabel" name="label_5">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Last Name</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="LastName">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
 	border:none;
 	border-radius: 15px;
 	border:2px solid #81BFDA;
 	background-color: rgb(254, 254, 254)
 
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
 }</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="2" column="0">
-                      <widget class="QFrame" name="AddressFrame">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_15">
-                        <item>
-                         <widget class="QLabel" name="label_6">
-                          <property name="styleSheet">
-                           <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>Address</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="Address">
-                          <property name="minimumSize">
-                           <size>
-                            <width>330</width>
-                            <height>49</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLineEdit{
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QFrame" name="AddressFrame">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_15">
+                            <item>
+                             <widget class="QLabel" name="label_6">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Address</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Address">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
 	border:none;
 	border-radius: 15px;
 	border:2px solid #81BFDA;
 	background-color: rgb(254, 254, 254)
 
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
 }</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="4" column="0">
-                      <widget class="QFrame" name="PetNameFrame">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_18">
-                        <item>
-                         <widget class="QLabel" name="label_16">
-                          <property name="styleSheet">
-                           <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>Pet Name</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="PetName">
-                          <property name="minimumSize">
-                           <size>
-                            <width>330</width>
-                            <height>49</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLineEdit{
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QFrame" name="CellNoFrame">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_16">
+                            <item>
+                             <widget class="QLabel" name="label_11">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Cell  No.</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="CellNo">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
 	border:none;
 	border-radius: 15px;
 	border:2px solid #81BFDA;
 	background-color: rgb(254, 254, 254)
 
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
 }</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="5" column="1">
-                      <widget class="QFrame" name="SpeciesFrame">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_21">
-                        <item>
-                         <widget class="QLabel" name="label_19">
-                          <property name="styleSheet">
-                           <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>Species</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="Species">
-                          <property name="minimumSize">
-                           <size>
-                            <width>330</width>
-                            <height>49</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLineEdit{
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QLabel" name="label_15">
+                           <property name="styleSheet">
+                            <string notr="true">font: 87 12pt &quot;Montserrat Black&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>PET DETAILS</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="4" column="0">
+                          <widget class="QFrame" name="PetNameFrame">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_18">
+                            <item>
+                             <widget class="QLabel" name="label_16">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Pet Name</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="PetName">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
 	border:none;
 	border-radius: 15px;
 	border:2px solid #81BFDA;
 	background-color: rgb(254, 254, 254)
 
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
 }</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="4" column="1">
-                      <widget class="QFrame" name="ColorFrame">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_19">
-                        <item>
-                         <widget class="QLabel" name="label_17">
-                          <property name="styleSheet">
-                           <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>Color</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="Color">
-                          <property name="minimumSize">
-                           <size>
-                            <width>330</width>
-                            <height>49</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLineEdit{
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="4" column="1">
+                          <widget class="QFrame" name="ColorFrame">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_19">
+                            <item>
+                             <widget class="QLabel" name="label_17">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Color</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Color">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
 	border:none;
 	border-radius: 15px;
 	border:2px solid #81BFDA;
 	background-color: rgb(254, 254, 254)
 
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
 }</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="2" column="1">
-                      <widget class="QFrame" name="CellNoFrame">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_16">
-                        <item>
-                         <widget class="QLabel" name="label_11">
-                          <property name="styleSheet">
-                           <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>Cell  No.</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="CellNo">
-                          <property name="minimumSize">
-                           <size>
-                            <width>330</width>
-                            <height>49</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLineEdit{
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="5" column="0">
+                          <widget class="QFrame" name="BreedFrame">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_20">
+                            <item>
+                             <widget class="QLabel" name="label_18">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Breed</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Breed">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
 	border:none;
 	border-radius: 15px;
 	border:2px solid #81BFDA;
 	background-color: rgb(254, 254, 254)
 
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
 }</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="3" column="0" alignment="Qt::AlignLeft">
-                      <widget class="QLabel" name="label_15">
-                       <property name="styleSheet">
-                        <string notr="true">font: 87 12pt &quot;Montserrat Black&quot;;</string>
-                       </property>
-                       <property name="text">
-                        <string>PET DETAILS</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="1" column="1">
-                      <widget class="QFrame" name="LastNameFrame">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_14">
-                        <item>
-                         <widget class="QLabel" name="label_5">
-                          <property name="styleSheet">
-                           <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>Last Name</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="LastName">
-                          <property name="minimumSize">
-                           <size>
-                            <width>330</width>
-                            <height>49</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLineEdit{
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="5" column="1">
+                          <widget class="QFrame" name="SpeciesFrame">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_21">
+                            <item>
+                             <widget class="QLabel" name="label_19">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Species</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Species">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
 	border:none;
 	border-radius: 15px;
 	border:2px solid #81BFDA;
 	background-color: rgb(254, 254, 254)
 
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
 }</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="1" column="0">
-                      <widget class="QFrame" name="FirstNameFrame">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_13">
-                        <item>
-                         <widget class="QLabel" name="label_4">
-                          <property name="styleSheet">
-                           <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
-                          </property>
-                          <property name="text">
-                           <string>First Name</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="FirstName">
-                          <property name="minimumSize">
-                           <size>
-                            <width>330</width>
-                            <height>49</height>
-                           </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLineEdit{
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="6" column="0">
+                          <widget class="QFrame" name="BreedFrame_2">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_29">
+                            <item>
+                             <widget class="QLabel" name="label_25">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Birthday</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Breed_5">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
 	border:none;
 	border-radius: 15px;
 	border:2px solid #81BFDA;
 	background-color: rgb(254, 254, 254)
 
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
 }</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                    </layout>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="6" column="1">
+                          <widget class="QFrame" name="BreedFrame_4">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_31">
+                            <item>
+                             <widget class="QLabel" name="label_27">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Sex</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboGender">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QComboBox {
+        background-color: #ffffff; 
+        border: 2px solid #81BFDA; 
+        border-radius: 15px;
+        padding-left: 130;
+        font: 63 12pt &quot;Montserrat SemiBold&quot;;
+		color:black;
+    }
+
+QComboBox::item:selected { 
+	color: black;
+ }
+QComboBox::item:!selected {
+ 	color: gray; 
+}
+QComboBox::drop-down {
+        border: none;
+        background: none;
+        width: 30px;
+    }
+
+ QComboBox QAbstractItemView {
+        background-color: white;
+        border: 1px solid #81BFDA;
+		border-radius:2px;
+        selection-background-color: #3498db; 
+        selection-color: black;
+		color: black;
+		
+	font: 63 8pt &quot;Montserrat SemiBold&quot;;
+    }
+
+</string>
+                              </property>
+                              <property name="editable">
+                               <bool>false</bool>
+                              </property>
+                              <property name="currentText">
+                               <string>Select Sex</string>
+                              </property>
+                              <property name="currentIndex">
+                               <number>0</number>
+                              </property>
+                              <property name="maxVisibleItems">
+                               <number>10</number>
+                              </property>
+                              <item>
+                               <property name="text">
+                                <string>Select Sex</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>Male</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>Female</string>
+                               </property>
+                              </item>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="7" column="0">
+                          <widget class="QFrame" name="BreedFrame_3">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_30">
+                            <item>
+                             <widget class="QLabel" name="label_26">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Breed</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="Breed_6">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
+	border:none;
+	border-radius: 15px;
+	border:2px solid #81BFDA;
+	background-color: rgb(254, 254, 254)
+
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
+}</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item row="7" column="1">
+                          <widget class="QFrame" name="BreedFrame_5">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLineEdit{
+	border:none;
+	border-radius: 15px;
+	border:2px solid #81BFDA;
+	background-color: rgb(254, 254, 254)
+
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
+}</string>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QGridLayout" name="gridLayout_3">
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_28">
+                              <property name="styleSheet">
+                               <string notr="true">font: 57  12pt &quot;Montserrat Medium&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Breed</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLineEdit" name="Breed_8">
+                              <property name="minimumSize">
+                               <size>
+                                <width>330</width>
+                                <height>49</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit{
+	font: 63 12pt &quot;Montserrat SemiBold&quot;;
+	color:rgb(25, 25, 25);
+	border:none;
+	border-radius: 15px;
+	border:2px solid #81BFDA;
+	background-color: rgb(254, 254, 254)
+
+}
+QLineEdit:focus{
+	background-color:rgb(220, 220, 220)
+}</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
                    </widget>
                   </item>
                  </layout>
