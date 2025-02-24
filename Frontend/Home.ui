@@ -540,7 +540,7 @@ QToolButton:hover{
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="styleSheet">
           <string notr="true">QStackedWidget{
-	background:transparent;
+	background:red;
 
 }</string>
          </property>
@@ -548,7 +548,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -797,6 +797,12 @@ Keeping tails wagging and hearts happy!</string>
                  </property>
                  <item alignment="Qt::AlignHCenter">
                   <widget class="QFrame" name="appointment_date">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>735</width>
@@ -805,7 +811,7 @@ Keeping tails wagging and hearts happy!</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>735</width>
+                     <width>1400</width>
                      <height>62</height>
                     </size>
                    </property>
@@ -1030,12 +1036,12 @@ QScrollBar::sub-page:vertical {
 
 }</string>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_9">
-           <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
             <widget class="QFrame" name="frame_2">
              <property name="styleSheet">
               <string notr="true">QFrame{
-	background:transparent;
+	background:white;
 
 }</string>
              </property>
@@ -1046,17 +1052,106 @@ QScrollBar::sub-page:vertical {
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_11">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>9</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
-               <widget class="QLabel" name="label_11">
-                <property name="styleSheet">
-                 <string notr="true">QLabel{
-	font: 81 36pt &quot;Montserrat ExtraBold&quot;;
-	color:red;
+               <widget class="QStackedWidget" name="AddpatientStack">
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <widget class="QWidget" name="page">
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <item>
+                   <widget class="QFrame" name="frame_3">
+                    <property name="minimumSize">
+                     <size>
+                      <width>530</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame{
+	border:none;
+	border-radius:10px;
+	background-color: #81BFDA;
+
 }</string>
-                </property>
-                <property name="text">
-                 <string>ADD PATIENT PAGE</string>
-                </property>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout">
+                     <item>
+                      <widget class="QLabel" name="label_3">
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+	color:black;
+	font: 81 26pt &quot;Montserrat ExtraBold&quot;;
+	qproperty-alignment: AlignCenter;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>WELCOME USER</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="pixmap">
+                        <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_4">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_2"/>
                </widget>
               </item>
              </layout>
