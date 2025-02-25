@@ -518,7 +518,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -1097,7 +1097,7 @@ QScrollBar::sub-page:vertical {
                      <property name="geometry">
                       <rect>
                        <x>0</x>
-                       <y>-174</y>
+                       <y>0</y>
                        <width>849</width>
                        <height>820</height>
                       </rect>
@@ -1698,7 +1698,7 @@ QLineEdit:focus{
                           </widget>
                          </item>
                          <item row="6" column="0">
-                          <widget class="QFrame" name="BreedFrame_2">
+                          <widget class="QFrame" name="BirthDay">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                              <horstretch>0</horstretch>
@@ -1723,7 +1723,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="Breed_5">
+                             <widget class="QLineEdit" name="Birthday">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -1750,7 +1750,7 @@ QLineEdit:focus{
                           </widget>
                          </item>
                          <item row="6" column="1">
-                          <widget class="QFrame" name="BreedFrame_4">
+                          <widget class="QFrame" name="Sex">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                              <horstretch>0</horstretch>
@@ -1775,7 +1775,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QComboBox" name="comboGender">
+                             <widget class="QComboBox" name="sex">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -1993,7 +1993,7 @@ QScrollBar::sub-page:vertical {
                      <property name="geometry">
                       <rect>
                        <x>0</x>
-                       <y>0</y>
+                       <y>-174</y>
                        <width>849</width>
                        <height>820</height>
                       </rect>
@@ -2169,7 +2169,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="FirstName_2">
+                             <widget class="QLineEdit" name="FirstNameConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -2224,7 +2224,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="LastName_2">
+                             <widget class="QLineEdit" name="LastNameConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -2279,7 +2279,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="Address_2">
+                             <widget class="QLineEdit" name="AddressConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -2334,7 +2334,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="CellNo_2">
+                             <widget class="QLineEdit" name="CellNoConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -2399,7 +2399,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="PetName_2">
+                             <widget class="QLineEdit" name="PetNameConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -2454,7 +2454,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="Color_2">
+                             <widget class="QLineEdit" name="ColorConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -2509,7 +2509,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="Breed_2">
+                             <widget class="QLineEdit" name="BreedConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -2564,7 +2564,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="Species_2">
+                             <widget class="QLineEdit" name="SpeciesConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -2594,7 +2594,7 @@ QLineEdit:focus{
                           </widget>
                          </item>
                          <item row="6" column="0">
-                          <widget class="QFrame" name="BreedFrame_6">
+                          <widget class="QFrame" name="BirthDay_2">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                              <horstretch>0</horstretch>
@@ -2619,7 +2619,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="Breed_6">
+                             <widget class="QLineEdit" name="BirthdayConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
@@ -2671,7 +2671,7 @@ QLineEdit:focus{
                              </widget>
                             </item>
                             <item>
-                             <widget class="QComboBox" name="comboGender_2">
+                             <widget class="QComboBox" name="sexConfirm">
                               <property name="minimumSize">
                                <size>
                                 <width>330</width>
