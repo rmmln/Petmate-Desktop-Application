@@ -26,7 +26,7 @@ class MainUI(QMainWindow):
             ["Francis Jerusalem", "09121212121", "03", "2:00PM", "Grooming"],
             ["Francis Jerusalem", "09121212121", "03", "2:00PM", "Grooming"],
         ])
-        #onclick function
+        #Changing main Page
         self.stackedWidget.setCurrentIndex(0)
         self.homeBtn.clicked.connect(lambda: self.navigate_to_page(0))
         self.addPatientBtn.clicked.connect(lambda: self.navigate_to_page(1))
@@ -35,7 +35,11 @@ class MainUI(QMainWindow):
 
         #gender placeholder
         self.comboGender.model().item(0).setEnabled(False)
+        #ProceedBtn
+        self.proceedBtn.clicked.connect(lambda: self.proceed_confirmation_page(1))
 
+    def proceed_confirmation_page(self,index):
+        self.AddpatientStack.setCurrentIndex(index)
     def navigate_to_page(self, index):
         self.stackedWidget.setCurrentIndex(index)
 
