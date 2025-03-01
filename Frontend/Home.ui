@@ -59,6 +59,18 @@
     <property name="spacing">
      <number>20</number>
     </property>
+    <property name="leftMargin">
+     <number>15</number>
+    </property>
+    <property name="topMargin">
+     <number>15</number>
+    </property>
+    <property name="rightMargin">
+     <number>15</number>
+    </property>
+    <property name="bottomMargin">
+     <number>15</number>
+    </property>
     <item>
      <widget class="QFrame" name="sideNav">
       <property name="enabled">
@@ -1049,7 +1061,7 @@ QScrollBar::sub-page:vertical {
               <item>
                <widget class="QStackedWidget" name="AddpatientStack">
                 <property name="currentIndex">
-                 <number>0</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="InputPage">
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1098,7 +1110,7 @@ QScrollBar::sub-page:vertical {
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>849</width>
+                       <width>837</width>
                        <height>820</height>
                       </rect>
                      </property>
@@ -1993,8 +2005,8 @@ QScrollBar::sub-page:vertical {
                      <property name="geometry">
                       <rect>
                        <x>0</x>
-                       <y>-174</y>
-                       <width>849</width>
+                       <y>-186</y>
+                       <width>837</width>
                        <height>820</height>
                       </rect>
                      </property>
@@ -2878,7 +2890,7 @@ color:black;
 }</string>
              </property>
              <property name="text">
-              <string>APPOINT MENT PAGE</string>
+              <string>APPOINTMENT PAGE</string>
              </property>
             </widget>
            </item>
