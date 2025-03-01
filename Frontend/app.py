@@ -35,34 +35,13 @@ class MainUI(QMainWindow):
 
         #gender placeholder
         self.sex.model().item(0).setEnabled(False)
-        #ProceedBtn
+
+
+        #Addpatient Stack navigation
+        self.AddpatientStack.setCurrentIndex(0)
         self.proceedBtn.clicked.connect(lambda: self.proceed_confirmation_page(1))
 
     def proceed_confirmation_page(self, index):
-
-        #Get data from input
-        first_name = self.FirstName.text()
-        last_name = self.LastName.text()
-        address = self.Address.text()
-        cell_no = self.CellNo.text()
-        pet_name = self.PetName.text()
-        color = self.Color.text()
-        breed = self.Breed.text()
-        species = self.Species.text()
-        birthday = self.Birthday.text()
-        gender = self.sex.currentText()
-
-        # Set the collected data into the confirmation page fields
-        self.FirstNameConfirm.setText(first_name)
-        self.LastNameConfirm.setText(last_name)
-        self.AddressConfirm.setText(address)
-        self.CellNoConfirm.setText(cell_no)
-        self.PetNameConfirm.setText(pet_name)
-        self.ColorConfirm.setText(color)
-        self.BreedConfirm.setText(breed)
-        self.SpeciesConfirm.setText(species)
-        self.BirthdayConfirm.setText(birthday)
-        self.sexConfirm.setText(gender)
 
         self.AddpatientStack.setCurrentIndex(index)
 
