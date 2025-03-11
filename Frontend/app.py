@@ -50,7 +50,6 @@ class MainUI(QMainWindow):
 
     #Insert sa table
     def insert_data(self, data):
-
         self.upcoming_appointment.setRowCount(len(data))
         self.upcoming_appointment.setColumnCount(len(data[0]))
 
