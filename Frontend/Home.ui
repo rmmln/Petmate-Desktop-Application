@@ -1046,6 +1046,9 @@ QScrollBar::sub-page:vertical {
               <property name="leftMargin">
                <number>9</number>
               </property>
+              <property name="topMargin">
+               <number>20</number>
+              </property>
               <property name="bottomMargin">
                <number>0</number>
               </property>
@@ -1108,23 +1111,13 @@ QScrollBar::sub-page:vertical {
               <property name="bottomMargin">
                <number>0</number>
               </property>
-              <item row="0" column="0">
+              <item row="0" column="0" alignment="Qt::AlignTop">
                <widget class="QLabel" name="label_4">
                 <property name="styleSheet">
                  <string notr="true">font: 16pt &quot;Rubik Mono One&quot;;</string>
                 </property>
                 <property name="text">
                  <string>BASIC INFORMATION</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLineEdit" name="lineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
                 </property>
                </widget>
               </item>
