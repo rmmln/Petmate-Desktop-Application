@@ -153,7 +153,7 @@
          <property name="maximumSize">
           <size>
            <width>260</width>
-           <height>500</height>
+           <height>260</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -571,7 +571,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -1075,23 +1075,8 @@ QScrollBar::sub-page:vertical {
            <property name="sizeConstraint">
             <enum>QLayout::SetDefaultConstraint</enum>
            </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item alignment="Qt::AlignTop">
+           <item alignment="Qt::AlignLeft|Qt::AlignTop">
             <widget class="QFrame" name="frame_2">
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -1099,11 +1084,14 @@ QScrollBar::sub-page:vertical {
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="spacing">
+               <number>70</number>
+              </property>
               <property name="leftMargin">
-               <number>9</number>
+               <number>50</number>
               </property>
               <property name="topMargin">
-               <number>0</number>
+               <number>30</number>
               </property>
               <property name="bottomMargin">
                <number>0</number>
@@ -1120,15 +1108,9 @@ QScrollBar::sub-page:vertical {
               </item>
               <item>
                <widget class="QLabel" name="label_3">
-                <property name="minimumSize">
-                 <size>
-                  <width>84</width>
-                  <height>40</height>
-                 </size>
-                </property>
                 <property name="maximumSize">
                  <size>
-                  <width>160</width>
+                  <width>140</width>
                   <height>60</height>
                  </size>
                 </property>
@@ -1141,6 +1123,12 @@ QScrollBar::sub-page:vertical {
                 <property name="scaledContents">
                  <bool>true</bool>
                 </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
                </widget>
               </item>
              </layout>
@@ -1148,10 +1136,16 @@ QScrollBar::sub-page:vertical {
            </item>
            <item>
             <widget class="QFrame" name="frame_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>550</height>
+               <height>0</height>
               </size>
              </property>
              <property name="frameShape">
@@ -1160,20 +1154,587 @@ QScrollBar::sub-page:vertical {
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QGridLayout" name="gridLayout_3">
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <property name="leftMargin">
+               <number>50</number>
+              </property>
               <property name="topMargin">
                <number>0</number>
               </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item row="0" column="0" alignment="Qt::AlignTop">
+              <item>
                <widget class="QLabel" name="label_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">font: 16pt &quot;Rubik Mono One&quot;;</string>
                 </property>
                 <property name="text">
                  <string>BASIC INFORMATION</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="ownerDetails">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_3" columnstretch="8,8,8">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_6">
+                   <property name="styleSheet">
+                    <string notr="true">font: 57 12pt &quot;Montserrat Medium&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>First name</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QLabel" name="label_14">
+                   <property name="styleSheet">
+                    <string notr="true">font: 57 12pt &quot;Montserrat Medium&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Phone number</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="lineEdit_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QLineEdit" name="lineEdit_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLineEdit" name="lineEdit">
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="label_11">
+                   <property name="styleSheet">
+                    <string notr="true">font: 57 12pt &quot;Montserrat Medium&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Last name</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_15">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">font: 16pt &quot;Rubik Mono One&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>ADDRESS</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="ownerDetails_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_4">
+                 <item row="1" column="3">
+                  <widget class="QLabel" name="label_17">
+                   <property name="styleSheet">
+                    <string notr="true">font: 57 12pt &quot;Montserrat Medium&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Barangay</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QComboBox" name="comboBox">
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QComboBox{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+
+}
+
+QComboBox::drop-down {
+	background-color:white;
+    border: none;
+}
+QComboBox::down-arrow {
+    image: url(:/Icons/Icons/downArrow.png);
+    width: 12px;
+    height: 12px;
+	padding-right: 10px;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QLabel" name="label_18">
+                   <property name="styleSheet">
+                    <string notr="true">font: 57 12pt &quot;Montserrat Medium&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>City/Municipality</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QComboBox" name="comboBox_2">
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QComboBox{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+	font: 63 11pt &quot;Montserrat SemiBold&quot;;
+	padding-left:5px;
+}
+
+QComboBox::drop-down {
+	background-color:white;
+    border: none;
+}
+QComboBox::down-arrow {
+    image: url(:/Icons/Icons/downArrow.png);
+    width: 12px;
+    height: 12px;
+	padding-right: 10px;
+}
+
+
+QComboBox QAbstractItemView {
+    background-color: white;
+    selection-background-color: rgb(193, 193, 193); 
+    selection-color: black;
+	font: 63 11pt &quot;Montserrat SemiBold&quot;;	
+}
+
+QComboBox QAbstractItemView::item {
+    background-color: white;
+    color: black;
+    height: 25px;
+	font: 63 11pt &quot;Montserrat SemiBold&quot;;	
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color:  rgb(193, 193, 193); 
+    color: black;
+}
+
+QComboBox QAbstractItemView QScrollBar {
+    background-color: #f0f0f0; 
+    width: 10px; 
+}
+QComboBox QAbstractItemView QScrollBar::handle {
+    background-color: rgb(129, 191, 218); 
+    border-radius: 5px; 
+    min-height: 30px; 
+}
+QComboBox QAbstractItemView QScrollBar::handle:hover {
+    background-color: rgb(86, 127, 145)
+}
+QComboBox QAbstractItemView QScrollBar::add-line,
+QComboBox QAbstractItemView QScrollBar::sub-line {
+    background: none;
+}</string>
+                   </property>
+                   <property name="currentIndex">
+                    <number>-1</number>
+                   </property>
+                   <property name="maxVisibleItems">
+                    <number>10</number>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Imus City ★</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Alfonso</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Amadeo</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Bacoor City</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Carmona</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cavite City</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dasmariñas City</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>General Emilio Aguinaldo</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>General Mariano Alvarez</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>General Trias City</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Indang</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kawit</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Magallanes</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Maragondon</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Mendez</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Naic</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Noveleta</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Rosario</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Silang</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Tagaytay City</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Tanza</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ternate</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Trece Martires City</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="label_16">
+                   <property name="styleSheet">
+                    <string notr="true">font: 57 12pt &quot;Montserrat Medium&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Province</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QComboBox" name="comboBox_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QComboBox{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+
+}
+
+QComboBox::drop-down {
+	background-color:white;
+    border: none;
+}
+QComboBox::down-arrow {
+    image: url(:/Icons/Icons/downArrow.png);
+    width: 12px;
+    height: 12px;
+	padding-right: 10px;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="ownerDetails_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_5" columnstretch="8,8,8">
+                 <item row="0" column="2">
+                  <widget class="QLabel" name="label_20">
+                   <property name="styleSheet">
+                    <string notr="true">font: 57 12pt &quot;Montserrat Medium&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Emergency no.</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="label_21">
+                   <property name="styleSheet">
+                    <string notr="true">font: 57 12pt &quot;Montserrat Medium&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Email</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QLineEdit" name="lineEdit_8">
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLineEdit" name="lineEdit_9">
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="lineEdit_7">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+}</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_19">
+                   <property name="styleSheet">
+                    <string notr="true">font: 57 12pt &quot;Montserrat Medium&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Subdivision/Ph/Blk-L</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QPushButton" name="pushButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>174</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>174</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	font: 63 15pt &quot;Montserrat SemiBold&quot;;
+	background-color:rgb(129, 191, 218);
+	border-radius: 5px;
+	border:none;
+}
+
+QPushButton:hover{
+	background-color:rgb(110, 163, 186);
+
+}</string>
+                </property>
+                <property name="text">
+                 <string>CONFIRM</string>
                 </property>
                </widget>
               </item>
@@ -1217,15 +1778,19 @@ color:black;
           </layout>
          </widget>
          <widget class="QWidget" name="SchedVax">
-          <layout class="QVBoxLayout" name="verticalLayout_9">
-           <item>
-            <widget class="QLabel" name="label_5">
-             <property name="text">
-              <string>sched vax page</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <widget class="QLabel" name="label_5">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>220</y>
+             <width>47</width>
+             <height>13</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
          </widget>
         </widget>
        </item>
