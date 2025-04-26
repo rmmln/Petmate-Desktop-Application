@@ -146,14 +146,14 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>240</width>
+           <width>260</width>
            <height>260</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>240</width>
-           <height>260</height>
+           <width>260</width>
+           <height>500</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -165,18 +165,6 @@
           <enum>QFrame::NoFrame</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
-          <property name="leftMargin">
-           <number>0</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
           <item>
            <widget class="QToolButton" name="homeBtn">
             <property name="minimumSize">
@@ -204,7 +192,7 @@ QToolButton:hover{
 }</string>
             </property>
             <property name="text">
-             <string>           HOME</string>
+             <string>HOME</string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">
@@ -257,7 +245,7 @@ QToolButton:hover{
 }</string>
             </property>
             <property name="text">
-             <string>     ADD PATIENT</string>
+             <string>ADD PATIENT</string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">
@@ -310,7 +298,7 @@ QToolButton:hover{
 }</string>
             </property>
             <property name="text">
-             <string>     PET RECORDS</string>
+             <string>PET RECORDS</string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">
@@ -363,11 +351,64 @@ QToolButton:hover{
 }</string>
             </property>
             <property name="text">
-             <string>     APPOINTMENT</string>
+             <string>APPOINTMENT</string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">
               <normaloff>:/Icons/Icons/AppointmentIcon.png</normaloff>:/Icons/Icons/AppointmentIcon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="popupMode">
+             <enum>QToolButton::DelayedPopup</enum>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+            <property name="autoRaise">
+             <bool>false</bool>
+            </property>
+            <property name="arrowType">
+             <enum>Qt::NoArrow</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="appointmentBtn_2">
+            <property name="minimumSize">
+             <size>
+              <width>240</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QToolButton{
+	border:none;
+	background-color:transparent;
+	font: 87 11pt &quot;Montserrat Black&quot;;
+	font-weight:bold;
+	color:#78B3CE;
+	border-radius:15px;
+	padding:10;
+}
+QToolButton:hover{
+	background-color: rgb(255, 241, 206);
+
+}</string>
+            </property>
+            <property name="text">
+             <string>SCHEDULED VACCINES</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/Icons/Icons/schedVax.png</normaloff>:/Icons/Icons/schedVax.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -530,7 +571,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -1034,8 +1075,23 @@ QScrollBar::sub-page:vertical {
            <property name="sizeConstraint">
             <enum>QLayout::SetDefaultConstraint</enum>
            </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item alignment="Qt::AlignTop">
             <widget class="QFrame" name="frame_2">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -1047,7 +1103,7 @@ QScrollBar::sub-page:vertical {
                <number>9</number>
               </property>
               <property name="topMargin">
-               <number>20</number>
+               <number>0</number>
               </property>
               <property name="bottomMargin">
                <number>0</number>
@@ -1155,6 +1211,17 @@ color:black;
              </property>
              <property name="text">
               <string>APPOINTMENT PAGE</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="SchedVax">
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>sched vax page</string>
              </property>
             </widget>
            </item>
