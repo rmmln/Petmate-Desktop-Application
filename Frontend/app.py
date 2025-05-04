@@ -4,8 +4,14 @@ from PyQt6.QtCore import Qt
 import resource
 from PyQt6.QtGui import QFontDatabase, QFont
 from uiLogic import UIHandler
+from Backend.sendData import save_data_to_db
 import os
+import django
 import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.','Backend')))
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Backend.myproject.settings")  # Adjust this to the correct path
+django.setup()
+
 
 
 class MainUI(QMainWindow):
@@ -24,6 +30,22 @@ class MainUI(QMainWindow):
         self.appointmentBtn.clicked.connect(lambda: self.navigate_to_page(3))
         self.schedVaxBtn.clicked.connect(lambda: self.navigate_to_page(4))
 
+        self.confirmButton.clicked.connect(self.submit_data)
+
+    def submit_data(self):
+        # Get the data from your QLineEdits
+        firstName = self.firstNameEdit.text()
+        lastname = self.lastNameEdit.text()
+        phoneNumber = self.phoneNumberEdit.text()
+        province = self.provinceComboBox.text()
+        city = self.cityComboBox.text()
+        barangay = self.barangayComboBox.text()
+        detailedAddress = self.detailedAddressEdit.text()
+        email = self.emailEdit.text()
+        emergencyNumber = self.emergencyNoEdit.text()
+
+        # Call the function to send the data to the database
+        save_data_to_db(firstName, lastname, phoneNumber, province, city, barangay, detailedAddress,email, emergencyNumber)
     def navigate_to_page(self, index):
         self.stackedWidget.setCurrentIndex(index)
 

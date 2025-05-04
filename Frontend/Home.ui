@@ -1037,7 +1037,7 @@ color:rgb(39, 39, 39);</string>
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QLineEdit" name="lineEdit_2">
+                  <widget class="QLineEdit" name="lastNameEdit">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -1063,7 +1063,7 @@ color:rgb(39, 39, 39);</string>
                   </widget>
                  </item>
                  <item row="1" column="2">
-                  <widget class="QLineEdit" name="lineEdit_3">
+                  <widget class="QLineEdit" name="phoneNumberEdit">
                    <property name="minimumSize">
                     <size>
                      <width>174</width>
@@ -1083,7 +1083,7 @@ color:rgb(39, 39, 39);</string>
                   </widget>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QLineEdit" name="lineEdit">
+                  <widget class="QLineEdit" name="firstNameEdit">
                    <property name="minimumSize">
                     <size>
                      <width>174</width>
@@ -1346,76 +1346,11 @@ QComboBox QAbstractItemView QScrollBar::groove:vertical {
 </string>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>-1</number>
                    </property>
                    <property name="maxVisibleItems">
                     <number>10</number>
                    </property>
-                   <item>
-                    <property name="text">
-                     <string>fg</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>asd</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>dsa</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>a</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>sd</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>asdd</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>asads</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>New Item</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>asd</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>fgh</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>hfg</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>hfg</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>fgh</string>
-                    </property>
-                   </item>
                   </widget>
                  </item>
                  <item row="1" column="1">
@@ -1545,14 +1480,23 @@ QComboBox QAbstractItemView QScrollBar::groove {
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_5" columnstretch="8,8,8">
-                 <item row="0" column="2">
-                  <widget class="QLabel" name="label_20">
-                   <property name="styleSheet">
-                    <string notr="true">font: 63 12pt &quot;Montserrat SemiBold&quot;;
-color:rgb(39, 39, 39);</string>
+                 <item row="1" column="0">
+                  <widget class="QLineEdit" name="detailedAddressEdit">
+                   <property name="minimumSize">
+                    <size>
+                     <width>174</width>
+                     <height>45</height>
+                    </size>
                    </property>
-                   <property name="text">
-                    <string>Emergency no.</string>
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit{
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 5px;
+	font: 81 12pt &quot;Montserrat ExtraBold&quot;;
+	color:rgb(39, 39, 39);
+	padding-left: 10px;
+}</string>
                    </property>
                   </widget>
                  </item>
@@ -1568,7 +1512,7 @@ color:rgb(39, 39, 39);</string>
                   </widget>
                  </item>
                  <item row="1" column="2">
-                  <widget class="QLineEdit" name="lineEdit_8">
+                  <widget class="QLineEdit" name="emergencyNoEdit">
                    <property name="minimumSize">
                     <size>
                      <width>174</width>
@@ -1587,28 +1531,19 @@ color:rgb(39, 39, 39);</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="1" column="0">
-                  <widget class="QLineEdit" name="lineEdit_9">
-                   <property name="minimumSize">
-                    <size>
-                     <width>174</width>
-                     <height>45</height>
-                    </size>
-                   </property>
+                 <item row="0" column="2">
+                  <widget class="QLabel" name="label_20">
                    <property name="styleSheet">
-                    <string notr="true">QLineEdit{
-	border-right: 2px solid #cccccc;
-    border-bottom: 2px solid #cccccc;
-    border-radius: 5px;
-	font: 81 12pt &quot;Montserrat ExtraBold&quot;;
-	color:rgb(39, 39, 39);
-	padding-left: 10px;
-}</string>
+                    <string notr="true">font: 63 12pt &quot;Montserrat SemiBold&quot;;
+color:rgb(39, 39, 39);</string>
+                   </property>
+                   <property name="text">
+                    <string>Emergency no.</string>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QLineEdit" name="lineEdit_7">
+                  <widget class="QLineEdit" name="emailEdit">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -1648,7 +1583,7 @@ color:rgb(39, 39, 39);</string>
                </widget>
               </item>
               <item alignment="Qt::AlignHCenter">
-               <widget class="QPushButton" name="pushButton">
+               <widget class="QPushButton" name="confirmButton">
                 <property name="minimumSize">
                  <size>
                   <width>174</width>
