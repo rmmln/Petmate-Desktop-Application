@@ -11,10 +11,10 @@ django.setup()
 
 from petInfoSys.models import basicInfo
 
-def save_data_to_db(firstName, lastname, phoneNumber, province, city, barangay, detailedAddress, email, emergencyNumber):
+def save_data_to_db(firstName, lastName, phoneNumber, province, city, barangay, detailedAddress, email, emergencyNumber):
     new_entry = basicInfo(
         firstName=firstName,
-        lastname=lastname,
+        lastName=lastName,
         phoneNumber=phoneNumber,
         province=province,
         city=city,
