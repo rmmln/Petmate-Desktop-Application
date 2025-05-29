@@ -31,6 +31,7 @@ class MainUI(QMainWindow):
         self.schedVaxBtn.clicked.connect(lambda: self.navigate_to_page(4))
 
         self.confirmButton.clicked.connect(self.submit_data)
+        self.successfullAlert.hide()
 
     def submit_data(self):
         firstName = self.firstNameEdit.text()

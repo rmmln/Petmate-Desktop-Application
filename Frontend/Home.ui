@@ -173,6 +173,9 @@
               <height>0</height>
              </size>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="autoFillBackground">
              <bool>false</bool>
             </property>
@@ -224,6 +227,9 @@ QToolButton:hover{
               <width>240</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="autoFillBackground">
              <bool>false</bool>
@@ -278,6 +284,9 @@ QToolButton:hover{
               <height>0</height>
              </size>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="autoFillBackground">
              <bool>false</bool>
             </property>
@@ -331,6 +340,9 @@ QToolButton:hover{
               <height>0</height>
              </size>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="autoFillBackground">
              <bool>false</bool>
             </property>
@@ -383,6 +395,9 @@ QToolButton:hover{
               <width>240</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="autoFillBackground">
              <bool>false</bool>
@@ -892,8 +907,89 @@ Keeping tails wagging and hearts happy!</string>
            <property name="sizeConstraint">
             <enum>QLayout::SetDefaultConstraint</enum>
            </property>
-           <item alignment="Qt::AlignLeft|Qt::AlignTop">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QFrame" name="successfullAlert">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>230</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>330</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#successfullAlert{
+	border-radius:15px;
+	border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+	background-color:white;
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <property name="lineWidth">
+              <number>1</number>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_23">
+                <property name="styleSheet">
+                 <string notr="true">font: 57 16pt &quot;Montserrat Medium&quot;;
+color:rgb(39, 39, 39);
+</string>
+                </property>
+                <property name="text">
+                 <string>Successfully  added!  </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_22">
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="resource.qrc">:/Icons/Icons/check.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
             <widget class="QFrame" name="frame_2">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -901,23 +997,12 @@ Keeping tails wagging and hearts happy!</string>
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout">
-              <property name="spacing">
-               <number>70</number>
-              </property>
-              <property name="leftMargin">
-               <number>50</number>
-              </property>
-              <property name="topMargin">
-               <number>30</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
               <item>
                <widget class="QLabel" name="label_2">
                 <property name="styleSheet">
                  <string notr="true">font: 25pt &quot;Rubik Mono One&quot;;
-color:rgb(39, 39, 39);</string>
+color:rgb(39, 39, 39);
+</string>
                 </property>
                 <property name="text">
                  <string>PETMATE ANIMAL CLINIC</string>
@@ -1618,6 +1703,9 @@ color:rgb(39, 39, 39);</string>
                   <height>16777215</height>
                  </size>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton{
 	font: 63 15pt &quot;Montserrat SemiBold&quot;;
@@ -1642,6 +1730,9 @@ QPushButton:hover{
             </widget>
            </item>
           </layout>
+          <zorder>frame_3</zorder>
+          <zorder>frame_2</zorder>
+          <zorder>successfullAlert</zorder>
          </widget>
          <widget class="QWidget" name="PetRecords">
           <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1699,5 +1790,22 @@ color:black;
  <resources>
   <include location="resource.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>confirmButton</sender>
+   <signal>clicked()</signal>
+   <receiver>successfullAlert</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>746</x>
+     <y>637</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>700</x>
+     <y>79</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
