@@ -9,11 +9,12 @@ import os
 import django
 import sys
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.', 'Backend')))
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Backend.myproject.settings")
 django.setup()
 
-
+    
 class MainUI(QMainWindow):
     def __init__(self):
         super(MainUI, self).__init__()
@@ -46,6 +47,7 @@ class MainUI(QMainWindow):
 
         save_data_to_db(firstName, lastName, phoneNumber, province, city, barangay, detailedAddress, email,
                         emergencyNumber)
+
 
 
 
