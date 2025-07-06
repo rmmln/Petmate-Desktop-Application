@@ -136,7 +136,7 @@
          </property>
         </widget>
        </item>
-       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <item alignment="Qt::AlignHCenter">
         <widget class="QFrame" name="Buttons">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -306,7 +306,7 @@ QToolButton:hover{
 }</string>
             </property>
             <property name="text">
-             <string>PET RECORDS</string>
+             <string>RECORDS</string>
             </property>
             <property name="icon">
              <iconset resource="resource.qrc">
@@ -510,7 +510,7 @@ QToolButton:hover{
          </property>
         </spacer>
        </item>
-       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <item alignment="Qt::AlignHCenter">
         <widget class="QToolButton" name="toolButton">
          <property name="minimumSize">
           <size>
@@ -585,7 +585,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -907,84 +907,6 @@ Keeping tails wagging and hearts happy!</string>
            <property name="sizeConstraint">
             <enum>QLayout::SetDefaultConstraint</enum>
            </property>
-           <item alignment="Qt::AlignHCenter">
-            <widget class="QFrame" name="successfullAlert">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>230</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>330</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">#successfullAlert{
-	border-radius:15px;
-	border-right: 2px solid #cccccc;
-    border-bottom: 2px solid #cccccc;
-	background-color:white;
-}</string>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <property name="lineWidth">
-              <number>1</number>
-             </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_4">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="label_23">
-                <property name="styleSheet">
-                 <string notr="true">font: 57 16pt &quot;Montserrat Medium&quot;;
-color:rgb(39, 39, 39);
-</string>
-                </property>
-                <property name="text">
-                 <string>Successfully  added!  </string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_22">
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap resource="resource.qrc">:/Icons/Icons/check.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
            <item>
             <widget class="QFrame" name="frame_2">
              <property name="styleSheet">
@@ -1732,21 +1654,59 @@ QPushButton:hover{
           </layout>
           <zorder>frame_3</zorder>
           <zorder>frame_2</zorder>
-          <zorder>successfullAlert</zorder>
          </widget>
          <widget class="QWidget" name="PetRecords">
           <layout class="QVBoxLayout" name="verticalLayout_10">
-           <item>
-            <widget class="QLabel" name="label_12">
+           <item alignment="Qt::AlignTop">
+            <widget class="QFrame" name="frame_4">
              <property name="styleSheet">
-              <string notr="true">QLabel{
-font: 81 36pt &quot;Montserrat ExtraBold&quot;;
-color:black;
-}</string>
+              <string notr="true"/>
              </property>
-             <property name="text">
-              <string>Pet Records Page</string>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
              </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QLabel" name="label_12">
+                <property name="styleSheet">
+                 <string notr="true">font: 25pt &quot;Rubik Mono One&quot;;
+color:rgb(39, 39, 39);
+</string>
+                </property>
+                <property name="text">
+                 <string>PERSONAL RECORDS</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_24">
+                <property name="maximumSize">
+                 <size>
+                  <width>140</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="resource.qrc">:/Images/image/petmateLogo.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="wordWrap">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -1790,22 +1750,5 @@ color:black;
  <resources>
   <include location="resource.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>confirmButton</sender>
-   <signal>clicked()</signal>
-   <receiver>successfullAlert</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>746</x>
-     <y>637</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>700</x>
-     <y>79</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

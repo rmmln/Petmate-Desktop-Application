@@ -48,6 +48,9 @@ class MainUI(QMainWindow):
         save_data_to_db(firstName, lastName, phoneNumber, province, city, barangay, detailedAddress, email,
                         emergencyNumber)
 
+        self.navigate_to_page(2)
+        self.successfullAlert.show()
+
 
 
 
