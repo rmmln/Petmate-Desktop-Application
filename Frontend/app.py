@@ -34,29 +34,72 @@ class MainUI(QMainWindow):
 
         self.confirmButton.clicked.connect(self.submit_data)
 
-
-
     def submit_data(self):
-        firstName = self.firstNameEdit.text()
-        lastName = self.lastNameEdit.text()
-        phoneNumber = self.phoneNumberEdit.text()
-        province = self.provinceComboBox.currentText()
-        city = self.cityComboBox.currentText()
-        barangay = self.barangayComboBox.currentText()
-        detailedAddress = self.detailedAddressEdit.text()
-        email = self.emailEdit.text()
-        emergencyNumber = self.emergencyNoEdit.text()
+        required_fields = {
+            "First Name": self.firstNameEdit,
+            "Last Name": self.lastNameEdit,
+            "Phone Number": self.phoneNumberEdit,
+            "Province": self.provinceComboBox,
+            "City": self.cityComboBox,
+            "Barangay": self.barangayComboBox,
+            "Detailed Address": self.detailedAddressEdit,
+            "Email": self.emailEdit,
+            "Emergency Number": self.emergencyNoEdit
+        }
 
-        save_data_to_db(firstName, lastName, phoneNumber, province, city, barangay, detailedAddress, email,
-                        emergencyNumber)
+        missing = []
+
+        default_style = """
+            QLineEdit {
+                border-right: 2px solid #cccccc;
+                border-bottom: 2px solid #cccccc;
+                border-radius: 5px;
+	
+	            font: 57 12pt 'Montserrat Medium';
+	            color:rgb(39, 39, 39);
+	            padding-left: 10px;
+            }"""
+
+        error_style = """
+            QLineEdit {
+                border: 1px solid red;
+                border-radius: 5px;
+
+                font: 57 12pt 'Montserrat Medium';
+                color:rgb(39, 39, 39);
+                padding-left: 10px;
+            }"""
+
+        for name, widget in required_fields.items():
+            text = widget.currentText() if "ComboBox" in widget.__class__.__name__ else widget.text()
+            if not text.strip():
+                widget.setStyleSheet(error_style)  # 🔴 highlight invalid
+                missing.append(name)
+            else:
+                widget.setStyleSheet(default_style)  # ✅ reset style
+
+        if missing:
+            message = "The following fields are required:\n• " + "\n• ".join(missing)
+            toast = Toast(self, message, icon_path="Icons/warning.png")
+            toast.show_toast()
+            return
+
+        # ✅ If all good, save and show success
+        save_data_to_db(
+            self.firstNameEdit.text(),
+            self.lastNameEdit.text(),
+            self.phoneNumberEdit.text(),
+            self.provinceComboBox.currentText(),
+            self.cityComboBox.currentText(),
+            self.barangayComboBox.currentText(),
+            self.detailedAddressEdit.text(),
+            self.emailEdit.text(),
+            self.emergencyNoEdit.text()
+        )
 
         self.navigate_to_page(2)
-        toast = Toast(self, "Successfully Added!",
-                      icon_path="Icons/check.png")  # Update the path to your success icon
+        toast = Toast(self, "Successfully Added!", icon_path="Icons/check.png")
         toast.show_toast()
-
-
-
 
     def navigate_to_page(self, index):
         self.stackedWidget.setCurrentIndex(index)
