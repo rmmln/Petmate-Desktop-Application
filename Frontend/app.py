@@ -5,6 +5,7 @@ import resource
 from PyQt6.QtGui import QFontDatabase, QFont
 from uiLogic import UIHandler
 from Backend.sendData import save_data_to_db
+from toast import Toast
 import os
 import django
 import sys
@@ -14,7 +15,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.', 'Ba
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Backend.myproject.settings")
 django.setup()
 
-    
+
 class MainUI(QMainWindow):
     def __init__(self):
         super(MainUI, self).__init__()
@@ -32,7 +33,8 @@ class MainUI(QMainWindow):
         self.schedVaxBtn.clicked.connect(lambda: self.navigate_to_page(4))
 
         self.confirmButton.clicked.connect(self.submit_data)
-        self.successfullAlert.hide()
+
+
 
     def submit_data(self):
         firstName = self.firstNameEdit.text()
@@ -49,7 +51,9 @@ class MainUI(QMainWindow):
                         emergencyNumber)
 
         self.navigate_to_page(2)
-        self.successfullAlert.show()
+        toast = Toast(self, "Successfully Added!",
+                      icon_path="Icons/check.png")  # Update the path to your success icon
+        toast.show_toast()
 
 
 
