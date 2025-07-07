@@ -72,7 +72,7 @@ class Toast(QWidget):
         self.raise_()
 
         self.slide_animation = QPropertyAnimation(self, b"pos")
-        self.slide_animation.setDuration(300)
+        self.slide_animation.setDuration(500)
         self.slide_animation.setStartValue(self.pos())
         self.slide_animation.setEndValue(QPoint(x, y))
         self.slide_animation.setEasingCurve(QEasingCurve.Type.OutBack)

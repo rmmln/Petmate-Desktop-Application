@@ -585,7 +585,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -1661,7 +1661,13 @@ QPushButton:hover{
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_10">
            <item alignment="Qt::AlignTop">
-            <widget class="QFrame" name="frame_4">
+            <widget class="QFrame" name="PersonalRecords">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="styleSheet">
               <string notr="true"/>
              </property>
@@ -1712,6 +1718,71 @@ color:rgb(39, 39, 39);
              </layout>
             </widget>
            </item>
+           <item alignment="Qt::AlignRight|Qt::AlignTop">
+            <widget class="QFrame" name="searchframe">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="sizeConstraint">
+               <enum>QLayout::SetDefaultConstraint</enum>
+              </property>
+              <item>
+               <widget class="QLineEdit" name="searchBar">
+                <property name="minimumSize">
+                 <size>
+                  <width>276</width>
+                  <height>44</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    background: #F0F0F0;
+    border-radius: 10px;
+    font: 57 12pt &quot;Montserrat Medium&quot;;
+    color: rgb(39, 39, 39);
+    padding-right: 30px;
+    background-image: url(:Icons/search.png);
+    background-repeat: no-repeat;
+    background-position: 8px center;
+}
+</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="Records">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <item>
+               <widget class="QScrollArea" name="scrollArea">
+                <property name="styleSheet">
+                 <string notr="true">border:none;</string>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>854</width>
+                   <height>480</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_13"/>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="AppointmentPage">
@@ -1752,7 +1823,6 @@ color:black;
  </widget>
  <resources>
   <include location="resource.qrc"/>
-  <include location="C:/Users/domas/.designer/backup/resource.qrc"/>
  </resources>
  <connections/>
 </ui>

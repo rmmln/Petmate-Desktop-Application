@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QMainWindow, QApplication
 from PyQt6 import uic
 from PyQt6.QtCore import Qt
 import resource
-from PyQt6.QtGui import QFontDatabase, QFont
+from PyQt6.QtGui import QFontDatabase, QFont, QPixmap
 from uiLogic import UIHandler
 from Backend.sendData import save_data_to_db
 from toast import Toast
@@ -15,6 +15,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.', 'Ba
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Backend.myproject.settings")
 django.setup()
 
+pixmap = QPixmap(":/Icons/search.png")
+print("Is Null:", pixmap.isNull())
 
 class MainUI(QMainWindow):
     def __init__(self):
@@ -33,6 +35,9 @@ class MainUI(QMainWindow):
         self.schedVaxBtn.clicked.connect(lambda: self.navigate_to_page(4))
 
         self.confirmButton.clicked.connect(self.submit_data)
+
+
+
 
     def submit_data(self):
         required_fields = {
@@ -62,7 +67,7 @@ class MainUI(QMainWindow):
 
         error_style = """
             QLineEdit {
-                border: 1px solid red;
+                border: 1px solid #ff4f61;
                 border-radius: 5px;
 
                 font: 57 12pt 'Montserrat Medium';
