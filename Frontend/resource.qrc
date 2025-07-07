@@ -1,22 +1,23 @@
 <RCC>
-  <qresource prefix="Icons">
-    <file>Icons/warning.png</file>
+  <qresource prefix="/Icons">
     <file>Icons/AddIcon.png</file>
-    <file>Icons/search.png</file>
+    <file>Icons/AppointmentIcon.png</file>
     <file>Icons/check.png</file>
     <file>Icons/downArrow.png</file>
-    <file>Icons/right-arrow.png</file>
-    <file>Icons/AppointmentIcon.png</file>
     <file>Icons/home.png</file>
-    <file>Icons/schedVax.png</file>
     <file>Icons/logOutIcon.png</file>
     <file>Icons/petDetailsIcon.png</file>
     <file>Icons/printIcon.png</file>
     <file>Icons/RecordsIcon.png</file>
+    <file>Icons/right-arrow.png</file>
+    <file>Icons/schedVax.png</file>
+    <file>Icons/SMS.png</file>
+    <file>Icons/searchIcon.png</file>
     <file>Icons/UpdateIcon.png</file>
     <file>Icons/UserIcon.png</file>
+    <file>Icons/warning.png</file>
   </qresource>
-  <qresource prefix="Images">
+  <qresource prefix="/images">
     <file>image/desktopIcon.png</file>
     <file>image/image 1.png</file>
     <file>image/navImg.png</file>

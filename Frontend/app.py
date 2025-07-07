@@ -1,8 +1,8 @@
-from PyQt6.QtWidgets import QMainWindow, QApplication
+from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QLineEdit
 from PyQt6 import uic
 from PyQt6.QtCore import Qt
-import resource
-from PyQt6.QtGui import QFontDatabase, QFont, QPixmap
+import resources_rc
+from PyQt6.QtGui import QFontDatabase, QFont, QPixmap, QIcon, QAction
 from uiLogic import UIHandler
 from Backend.sendData import save_data_to_db
 from toast import Toast
@@ -15,8 +15,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.', 'Ba
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Backend.myproject.settings")
 django.setup()
 
-pixmap = QPixmap(":/Icons/search.png")
-print("Is Null:", pixmap.isNull())
+
 
 class MainUI(QMainWindow):
     def __init__(self):
@@ -35,6 +34,8 @@ class MainUI(QMainWindow):
         self.schedVaxBtn.clicked.connect(lambda: self.navigate_to_page(4))
 
         self.confirmButton.clicked.connect(self.submit_data)
+
+
 
 
 
@@ -112,6 +113,7 @@ class MainUI(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+
 
     font_path = os.path.join(os.path.dirname(__file__), "font/Montserrat/Montserrat-VariableFont_wght.ttf")
     font_id = QFontDatabase.addApplicationFont(font_path)
