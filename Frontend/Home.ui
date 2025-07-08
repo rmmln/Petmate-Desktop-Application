@@ -1799,8 +1799,7 @@ border-bottom-right-radius:10px;
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">
-</string>
+                    <string notr="true"/>
                    </property>
                    <property name="text">
                     <string/>
@@ -1892,6 +1891,7 @@ color:black;
  </widget>
  <resources>
   <include location="resource.qrc"/>
+  <include location="C:/Users/domas/.designer/backup/resource.qrc"/>
  </resources>
  <connections/>
 </ui>
