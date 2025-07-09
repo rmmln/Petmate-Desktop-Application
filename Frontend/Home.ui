@@ -585,7 +585,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>5</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -1876,6 +1876,17 @@ color:black;
             <widget class="QLabel" name="label_5">
              <property name="text">
               <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page">
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>PROFILE PAGE</string>
              </property>
             </widget>
            </item>
