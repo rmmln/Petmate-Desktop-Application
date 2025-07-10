@@ -1840,8 +1840,8 @@ border-bottom-right-radius:10px;
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>854</width>
-                   <height>480</height>
+                   <width>100</width>
+                   <height>30</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_13"/>
@@ -1902,7 +1902,7 @@ color:black;
  </widget>
  <resources>
   <include location="resource.qrc"/>
-  <include location="C:/Users/domas/.designer/backup/resource.qrc"/>
+  <include location="resource.qrc"/>
  </resources>
  <connections/>
 </ui>
