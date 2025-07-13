@@ -85,7 +85,7 @@ class MainUI(QMainWindow):
                 widget.setStyleSheet(default_style)  # ✅ reset style
 
         if missing:
-            message = "The following fields are required:\n• " + "\n• ".join(missing)
+ g           message = "The following fields are required:\n• " + "\n• ".join(missing)
             toast = Toast(self, message, icon_path="Icons/warning.png")
             toast.show_toast()
             return
