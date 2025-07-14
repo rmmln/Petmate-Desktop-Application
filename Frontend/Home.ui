@@ -1826,8 +1826,8 @@ border-bottom-right-radius:10px;
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>854</width>
-                   <height>480</height>
+                   <width>50</width>
+                   <height>18</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_13"/>
@@ -1845,7 +1845,7 @@ border-bottom-right-radius:10px;
             <rect>
              <x>10</x>
              <y>20</y>
-             <width>741</width>
+             <width>651</width>
              <height>61</height>
             </rect>
            </property>
@@ -1885,6 +1885,106 @@ margin: 5px;
             <bool>true</bool>
            </property>
           </widget>
+          <widget class="QLabel" name="label_25">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>110</y>
+             <width>111</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+QLabel {
+    background-color: transparent;
+	color: black;
+	font: 18px montserrat;
+}
+QLabel:hover {
+    background-color: #FCD597;
+	border-radius: 5px;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Walk-ins</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_26">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>110</y>
+             <width>111</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+QLabel {
+    background-color: transparent;
+	color: black;
+	font: 18px montserrat;
+}
+QLabel:hover {
+    background-color: #FCD597;
+	border-radius: 5px;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Website</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_27">
+           <property name="geometry">
+            <rect>
+             <x>670</x>
+             <y>110</y>
+             <width>221</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16px Montserrat;
+color: #272727;</string>
+           </property>
+           <property name="text">
+            <string>search records....</string>
+           </property>
+          </widget>
+          <widget class="QFrame" name="frame_4">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>80</y>
+             <width>120</width>
+             <height>80</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: transparent;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Shadow::Raised</enum>
+           </property>
+          </widget>
+          <zorder>frame_4</zorder>
+          <zorder>label_13</zorder>
+          <zorder>label_23</zorder>
+          <zorder>label_25</zorder>
+          <zorder>label_26</zorder>
+          <zorder>label_27</zorder>
          </widget>
          <widget class="QWidget" name="SchedVax">
           <layout class="QHBoxLayout" name="horizontalLayout_2">
