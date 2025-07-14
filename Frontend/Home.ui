@@ -26,8 +26,8 @@
    <string>PETMATE INFORMATION SYSTEM</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/images/desktopIcon.png</normaloff>:/images/desktopIcon.png</iconset>
+   <iconset resource="resource.qrc">
+    <normaloff>:/images/image/desktopIcon.png</normaloff>:/images/image/desktopIcon.png</iconset>
   </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
@@ -38,11 +38,11 @@
 
 }</string>
   </property>
-  <property name="iconSize">
-   <size>
-    <width>31</width>
-    <height>24</height>
-   </size>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -585,7 +585,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>5</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -1840,8 +1840,8 @@ border-bottom-right-radius:10px;
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>100</width>
-                   <height>30</height>
+                   <width>854</width>
+                   <height>480</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_13"/>
