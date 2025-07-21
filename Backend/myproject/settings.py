@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'petInfoSys',
+    'rest_framework',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',

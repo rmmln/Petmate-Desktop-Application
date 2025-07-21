@@ -4,16 +4,10 @@ from PyQt6.QtCore import Qt
 import resources_rc
 from PyQt6.QtGui import QFontDatabase, QFont, QPixmap, QIcon, QAction
 from uiLogic import UIHandler
-from Backend.sendData import save_data_to_db
 from toast import Toast
+from Backend.api_client import add_new_patient
 import os
-import django
 import sys
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.', 'Backend')))
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Backend.myproject.settings")
-django.setup()
 
 
 
@@ -91,21 +85,25 @@ class MainUI(QMainWindow):
             return
 
         # ✅ If all good, save and show success
-        save_data_to_db(
-            self.firstNameEdit.text(),
-            self.lastNameEdit.text(),
-            self.phoneNumberEdit.text(),
-            self.provinceComboBox.currentText(),
-            self.cityComboBox.currentText(),
-            self.barangayComboBox.currentText(),
-            self.detailedAddressEdit.text(),
-            self.emailEdit.text(),
-            self.emergencyNoEdit.text()
-        )
+        data = {
+            "firstName": self.firstNameEdit.text(),
+            "lastName": self.lastNameEdit.text(),
+            "phoneNumber": self.phoneNumberEdit.text(),
+            "province": self.provinceComboBox.currentText(),
+            "city": self.cityComboBox.currentText(),
+            "barangay": self.barangayComboBox.currentText(),
+            "detailedAddress": self.detailedAddressEdit.text(),
+            "email": self.emailEdit.text(),
+            "emergencyNumber": self.emergencyNoEdit.text()
+        }
 
-        self.navigate_to_page(2)
-        toast = Toast(self, "Successfully Added!", icon_path="Icons/check.png")
-        toast.show_toast()
+        if add_new_patient(data):
+            self.navigate_to_page(2)
+            toast = Toast(self, "Successfully Added!", icon_path="Icons/check.png")
+            toast.show_toast()
+        else:
+            toast = Toast(self, "Failed to add patient!", icon_path="Icons/warning.png")
+            toast.show_toast()
 
     def navigate_to_page(self, index):
         self.stackedWidget.setCurrentIndex(index)
