@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QLineEdit
+from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QLineEdit, QWidget,QComboBox
 from PyQt6 import uic
 from PyQt6.QtCore import Qt
 import resources_rc
@@ -6,6 +6,7 @@ from PyQt6.QtGui import QFontDatabase, QFont, QPixmap, QIcon, QAction
 from uiLogic import UIHandler
 from toast import Toast
 from Backend.api_client import add_new_patient
+import requests
 import os
 import sys
 
@@ -19,6 +20,14 @@ class MainUI(QMainWindow):
         self.ui_handler = UIHandler(self.provinceComboBox, self.cityComboBox, self.barangayComboBox)
         self.ui_handler.load_provinces()
 
+        # 👉 Set layout before loading patients
+        self.patientListLayout = self.scrollAreaWidgetContents.layout()
+        self.patientListLayout.setSpacing(10)  # spacing between cards
+        self.patientListLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
+
+        # Load patients now
+        self.load_patients()
+
         #Changing main Page
         self.stackedWidget.setCurrentIndex(0)
         self.homeBtn.clicked.connect(lambda: self.navigate_to_page(0))
@@ -28,8 +37,6 @@ class MainUI(QMainWindow):
         self.schedVaxBtn.clicked.connect(lambda: self.navigate_to_page(4))
 
         self.confirmButton.clicked.connect(self.submit_data)
-
-
 
 
 
@@ -60,6 +67,170 @@ class MainUI(QMainWindow):
 	            padding-left: 10px;
             }"""
 
+        default_combobox_style = """
+            QComboBox {
+                border-right: 2px solid #cccccc;
+                border-bottom: 2px solid #cccccc;
+                border-radius: 5px;
+                font: 63 12pt "Montserrat SemiBold";
+                padding-left: 5px;
+                color: rgb(39, 39, 39);
+            }
+            
+            QComboBox::drop-down {
+                background-color: white;
+                border: none;
+            }
+            
+            QComboBox::down-arrow {
+                image: url(:/Icons/Icons/downArrow.png);
+                width: 12px;
+                height: 12px;
+                padding-right: 10px;
+            }
+            
+            /* Dropdown list */
+            QComboBox QAbstractItemView {
+                background-color: white;
+                selection-background-color: rgb(193, 193, 193); 
+                selection-color: black;
+                font: 63 12pt "Montserrat SemiBold";
+                outline: none;
+                border:none;
+            }
+            
+            /* List items */
+            QComboBox QAbstractItemView::item {
+                background-color: white;
+                color: black;
+                height: 25px;
+                font: 63 12pt "Montserrat SemiBold";
+            }
+            
+            QComboBox QAbstractItemView::item:hover {
+                background-color: rgb(193, 193, 193);
+                color: black;
+            }
+            
+            /* Scrollbar inside dropdown */
+            QComboBox QAbstractItemView QScrollBar:vertical {
+                background-color: transparent; /* or set a solid color */
+                width: 10px;
+                border: none;
+            }
+            
+            QComboBox QAbstractItemView QScrollBar::handle:vertical {
+                background-color: rgb(129, 191, 218);
+                border-radius: 5px;
+                min-height: 120px;
+            }
+            
+            QComboBox QAbstractItemView QScrollBar::handle:vertical:hover {
+                background-color: rgb(86, 127, 145);
+            }
+            
+            QComboBox QAbstractItemView QScrollBar::add-line:vertical,
+            QComboBox QAbstractItemView QScrollBar::sub-line:vertical {
+                height: 0px;
+                background: none;
+                border: none;
+            }
+            
+            QComboBox QAbstractItemView QScrollBar::groove:vertical {
+                background: transparent;
+                outline: none;
+                border: none;
+            }
+            QComboBox QAbstractItemView QScrollBar,
+            QComboBox QAbstractItemView QScrollBar::handle,
+            QComboBox QAbstractItemView QScrollBar::groove {
+                outline: none;
+                border: none;
+            }
+
+        """
+
+        error_combobox_style = """
+                    QComboBox {
+                        border: 1px solid #ff4f61;
+                        border-radius: 5px;
+                        font: 63 12pt "Montserrat SemiBold";
+                        padding-left: 5px;
+                        color: rgb(39, 39, 39);
+                    }
+
+                    QComboBox::drop-down {
+                        background-color: white;
+                        border: none;
+                    }
+
+                    QComboBox::down-arrow {
+                        image: url(:/Icons/Icons/downArrow.png);
+                        width: 12px;
+                        height: 12px;
+                        padding-right: 10px;
+                    }
+
+                    /* Dropdown list */
+                    QComboBox QAbstractItemView {
+                        background-color: white;
+                        selection-background-color: rgb(193, 193, 193); 
+                        selection-color: black;
+                        font: 63 12pt "Montserrat SemiBold";
+                        outline: none;
+                        border:none;
+                    }
+
+                    /* List items */
+                    QComboBox QAbstractItemView::item {
+                        background-color: white;
+                        color: black;
+                        height: 25px;
+                        font: 63 12pt "Montserrat SemiBold";
+                    }
+
+                    QComboBox QAbstractItemView::item:hover {
+                        background-color: rgb(193, 193, 193);
+                        color: black;
+                    }
+
+                    /* Scrollbar inside dropdown */
+                    QComboBox QAbstractItemView QScrollBar:vertical {
+                        background-color: transparent; /* or set a solid color */
+                        width: 10px;
+                        border: none;
+                    }
+
+                    QComboBox QAbstractItemView QScrollBar::handle:vertical {
+                        background-color: rgb(129, 191, 218);
+                        border-radius: 5px;
+                        min-height: 120px;
+                    }
+
+                    QComboBox QAbstractItemView QScrollBar::handle:vertical:hover {
+                        background-color: rgb(86, 127, 145);
+                    }
+
+                    QComboBox QAbstractItemView QScrollBar::add-line:vertical,
+                    QComboBox QAbstractItemView QScrollBar::sub-line:vertical {
+                        height: 0px;
+                        background: none;
+                        border: none;
+                    }
+
+                    QComboBox QAbstractItemView QScrollBar::groove:vertical {
+                        background: transparent;
+                        outline: none;
+                        border: none;
+                    }
+                    QComboBox QAbstractItemView QScrollBar,
+                    QComboBox QAbstractItemView QScrollBar::handle,
+                    QComboBox QAbstractItemView QScrollBar::groove {
+                        outline: none;
+                        border: none;
+                    }
+
+                """
         error_style = """
             QLineEdit {
                 border: 1px solid #ff4f61;
@@ -70,13 +241,35 @@ class MainUI(QMainWindow):
                 padding-left: 10px;
             }"""
 
-        for name, widget in required_fields.items():
-            text = widget.currentText() if "ComboBox" in widget.__class__.__name__ else widget.text()
-            if not text.strip():
-                widget.setStyleSheet(error_style)  # 🔴 highlight invalid
-                missing.append(name)
+        def apply_style(widget, error=False):
+            is_combobox = "QComboBox" in widget.__class__.__name__
+            if error:
+                if is_combobox:
+                    widget.setStyleSheet(error_combobox_style)
+                else:
+                    widget.setStyleSheet(error_style)
             else:
-                widget.setStyleSheet(default_style)  # ✅ reset style
+                if is_combobox:
+                    widget.setStyleSheet(default_combobox_style)
+                else:
+                    widget.setStyleSheet(default_style)
+
+        for name, widget in required_fields.items():
+            is_combobox = "QComboBox" in widget.__class__.__name__
+
+            if is_combobox:
+                if widget.currentIndex() == 0:  # user didn't select a valid item
+                    apply_style(widget, error=True)
+                    missing.append(name)
+                else:
+                    apply_style(widget, error=False)
+            else:
+                text = widget.text()
+                if not text.strip():
+                    apply_style(widget, error=True)
+                    missing.append(name)
+                else:
+                    apply_style(widget, error=False)
 
         if missing:
             message = "The following fields are required:\n• " + "\n• ".join(missing)
@@ -99,11 +292,54 @@ class MainUI(QMainWindow):
 
         if add_new_patient(data):
             self.navigate_to_page(2)
-            toast = Toast(self, "Successfully Added!", icon_path="Icons/check.png")
+            self.load_patients()
+
+            # clear fields
+            self.firstNameEdit.clear()
+            self.lastNameEdit.clear()
+            self.phoneNumberEdit.clear()
+            self.detailedAddressEdit.clear()
+            self.emailEdit.clear()
+            self.emergencyNoEdit.clear()
+
+            # Reset combo boxes to first index
+            self.provinceComboBox.setCurrentIndex(0)
+            self.cityComboBox.setCurrentIndex(0)
+            self.barangayComboBox.setCurrentIndex(0)
+
+            # Reset styles to default
+            for widget in required_fields.values():
+                if isinstance(widget, QLineEdit):
+                    widget.setStyleSheet(default_style)
+                elif isinstance(widget, QComboBox):
+                    widget.setStyleSheet(default_combobox_style)
+
+            toast = Toast(self,icon_path="Icons/check.png")
             toast.show_toast()
+
+
         else:
             toast = Toast(self, "Failed to add patient!", icon_path="Icons/warning.png")
             toast.show_toast()
+
+    def load_patients(self):
+        response = requests.get("http://127.0.0.1:8000/api/patients/")
+        if response.status_code == 200:
+            patients = response.json()
+        else:
+            patients = []
+
+        # 🧹 Clear existing items before adding new ones
+        while self.patientListLayout.count():
+            child = self.patientListLayout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+
+        for patient in patients:
+            card = uic.loadUi("PatientCard.ui")
+            card.nameLabel.setText(f"{patient['firstName']} {patient['lastName']}")
+            card.emailLabel.setText(patient['email'])
+            self.patientListLayout.insertWidget(0, card)
 
     def navigate_to_page(self, index):
         self.stackedWidget.setCurrentIndex(index)

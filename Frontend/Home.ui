@@ -518,6 +518,9 @@ QToolButton:hover{
            <height>0</height>
           </size>
          </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true">QToolButton{
 	border:none;
@@ -585,7 +588,7 @@ QToolButton:hover{
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>5</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -1819,36 +1822,79 @@ border-bottom-right-radius:10px;
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="Records">
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+            <widget class="QScrollArea" name="patientScrollArea">
+             <property name="styleSheet">
+              <string notr="true">#patientScrollArea{
+	border:none;
+
+}
+#patientScrollArea QScrollBar:vertical {
+    background: transparent; /* or any background */
+    width: 10px;
+    margin: 0px;
+}
+
+#patientScrollArea QScrollBar::handle:vertical {
+    background-color: rgb(129, 191, 218);
+    border-radius: 5px;
+    min-height: 120px;
+	min-height: 200px;
+}
+
+#patientScrollArea QScrollBar::handle:vertical:hover {
+    background-color: rgb(86, 127, 145);
+}
+
+#patientScrollArea QScrollBar::add-line:vertical,
+#patientScrollArea QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: none;
+    border: none;
+}
+
+#patientScrollArea QScrollBar::groove:vertical {
+    background: transparent;
+    border: none;
+    border-radius: 0px;
+}
+</string>
              </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+             <property name="widgetResizable">
+              <bool>true</bool>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_11">
-              <item>
-               <widget class="QScrollArea" name="scrollArea">
-                <property name="styleSheet">
-                 <string notr="true">border:none;</string>
-                </property>
-                <property name="widgetResizable">
-                 <bool>true</bool>
-                </property>
-                <widget class="QWidget" name="scrollAreaWidgetContents">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>0</y>
-                   <width>100</width>
-                   <height>30</height>
-                  </rect>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_13"/>
-                </widget>
-               </widget>
-              </item>
-             </layout>
+             <widget class="QWidget" name="scrollAreaWidgetContents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>874</width>
+                <height>500</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_11">
+               <property name="spacing">
+                <number>5</number>
+               </property>
+               <property name="sizeConstraint">
+                <enum>QLayout::SetMinimumSize</enum>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -1901,7 +1947,6 @@ color:black;
   </widget>
  </widget>
  <resources>
-  <include location="resource.qrc"/>
   <include location="resource.qrc"/>
  </resources>
  <connections/>
