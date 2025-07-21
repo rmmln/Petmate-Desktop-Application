@@ -41,9 +41,10 @@ class MainUI(QMainWindow):
         shadow.setBlurRadius(15)
         shadow.setXOffset(5)
         shadow.setYOffset(5)
-        shadow.setColor(QColor(0, 0, 0, 160))  # semi-transparent black
-
+        shadow.setColor(QColor(0, 0, 0, 50))
         self.dropShadow.setGraphicsEffect(shadow)
+
+
 
     def submit_data(self):
         required_fields = {
