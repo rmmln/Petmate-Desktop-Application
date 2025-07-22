@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/Icons">
+    <file>Icons/AddIconAppointment.png</file>
     <file>Icons/delete.png</file>
     <file>Icons/AddIcon.png</file>
     <file>Icons/AppointmentIcon.png</file>

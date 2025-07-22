@@ -2152,6 +2152,90 @@ border-bottom-right-radius:10px;
             </widget>
            </item>
            <item>
+            <widget class="QFrame" name="addWalkinButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#addWalkinButton{
+	border: 2px dashed #4F4F4F;
+    border-radius: 10px;
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>30</number>
+              </property>
+              <property name="topMargin">
+               <number>8</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>8</number>
+              </property>
+              <item>
+               <widget class="QToolButton" name="toolButton_3">
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/Icons/Icons/AddIconAppointment.png</normaloff>:/Icons/Icons/AddIconAppointment.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="toolButton_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton{
+	font: 81 25pt &quot;Montserrat ExtraBold&quot;;
+	color: #4F4F4F;
+}</string>
+                </property>
+                <property name="text">
+                 <string>ADD APPOINTMENT</string>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>34</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonTextBesideIcon</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
             <widget class="QStackedWidget" name="walkInOrWeb">
              <property name="currentIndex">
               <number>0</number>
@@ -2187,7 +2271,7 @@ border-bottom-right-radius:10px;
                     <x>0</x>
                     <y>0</y>
                     <width>874</width>
-                    <height>480</height>
+                    <height>393</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_17">
