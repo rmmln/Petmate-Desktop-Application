@@ -96,7 +96,7 @@
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="topMargin">
@@ -105,7 +105,7 @@
        <property name="bottomMargin">
         <number>40</number>
        </property>
-       <item alignment="Qt::AlignHCenter">
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
         <widget class="QLabel" name="PetmateLogo">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -136,7 +136,7 @@
          </property>
         </widget>
        </item>
-       <item alignment="Qt::AlignHCenter">
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
         <widget class="QFrame" name="Buttons">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -162,7 +162,7 @@
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
+          <enum>QFrame::Shape::NoFrame</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
@@ -207,16 +207,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -263,16 +263,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -319,16 +319,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -375,16 +375,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -431,16 +431,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -450,7 +450,7 @@ QToolButton:hover{
        <item>
         <spacer name="verticalSpacer_2">
          <property name="orientation">
-          <enum>Qt::Vertical</enum>
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -460,7 +460,7 @@ QToolButton:hover{
          </property>
         </spacer>
        </item>
-       <item alignment="Qt::AlignHCenter">
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
         <widget class="QLabel" name="label">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -500,7 +500,7 @@ QToolButton:hover{
        <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
-          <enum>Qt::Vertical</enum>
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -510,7 +510,7 @@ QToolButton:hover{
          </property>
         </spacer>
        </item>
-       <item alignment="Qt::AlignHCenter">
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
         <widget class="QToolButton" name="toolButton">
          <property name="minimumSize">
           <size>
@@ -550,7 +550,7 @@ QToolButton:hover{
           </size>
          </property>
          <property name="toolButtonStyle">
-          <enum>Qt::ToolButtonTextBesideIcon</enum>
+          <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
          </property>
         </widget>
        </item>
@@ -573,7 +573,7 @@ QToolButton:hover{
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
@@ -585,7 +585,7 @@ QToolButton:hover{
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
+          <enum>QFrame::Shape::NoFrame</enum>
          </property>
          <property name="currentIndex">
           <number>3</number>
@@ -622,10 +622,10 @@ QToolButton:hover{
 }</string>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <property name="spacing">
@@ -670,13 +670,13 @@ QToolButton:hover{
 }</string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::NoFrame</enum>
+                 <enum>QFrame::Shape::NoFrame</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_7">
                  <property name="leftMargin">
                   <number>45</number>
                  </property>
-                 <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                 <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
                   <widget class="QFrame" name="welcome">
                    <property name="styleSheet">
                     <string notr="true">QFrame{
@@ -685,14 +685,14 @@ QToolButton:hover{
 }</string>
                    </property>
                    <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
+                    <enum>QFrame::Shape::NoFrame</enum>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_4">
                     <property name="spacing">
                      <number>20</number>
                     </property>
                     <property name="sizeConstraint">
-                     <enum>QLayout::SetDefaultConstraint</enum>
+                     <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -703,7 +703,7 @@ QToolButton:hover{
                     <property name="rightMargin">
                      <number>0</number>
                     </property>
-                    <item alignment="Qt::AlignTop">
+                    <item alignment="Qt::AlignmentFlag::AlignTop">
                      <widget class="QLabel" name="label_7">
                       <property name="maximumSize">
                        <size>
@@ -726,13 +726,13 @@ Animal Clinic!
 </string>
                       </property>
                       <property name="textFormat">
-                       <enum>Qt::AutoText</enum>
+                       <enum>Qt::TextFormat::AutoText</enum>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
                       </property>
                       <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
                       </property>
                       <property name="wordWrap">
                        <bool>false</bool>
@@ -742,7 +742,7 @@ Animal Clinic!
                       </property>
                      </widget>
                     </item>
-                    <item alignment="Qt::AlignBottom">
+                    <item alignment="Qt::AlignmentFlag::AlignBottom">
                      <widget class="QLabel" name="label_8">
                       <property name="maximumSize">
                        <size>
@@ -772,10 +772,10 @@ Keeping tails wagging and hearts happy!</string>
                  <item>
                   <widget class="QFrame" name="picture">
                    <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
+                    <enum>QFrame::Shape::NoFrame</enum>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_5">
-                    <item alignment="Qt::AlignRight">
+                    <item alignment="Qt::AlignmentFlag::AlignRight">
                      <widget class="QLabel" name="label_9">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -833,13 +833,13 @@ Keeping tails wagging and hearts happy!</string>
 }</string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::NoFrame</enum>
+                 <enum>QFrame::Shape::NoFrame</enum>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <property name="spacing">
                   <number>10</number>
                  </property>
-                 <item alignment="Qt::AlignHCenter">
+                 <item alignment="Qt::AlignmentFlag::AlignHCenter">
                   <widget class="QFrame" name="appointment_date">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -868,10 +868,10 @@ Keeping tails wagging and hearts happy!</string>
 }</string>
                    </property>
                    <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
+                    <enum>QFrame::Shape::NoFrame</enum>
                    </property>
                    <layout class="QGridLayout" name="gridLayout">
-                    <item row="0" column="0" alignment="Qt::AlignHCenter">
+                    <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
                      <widget class="QLabel" name="label_10">
                       <property name="styleSheet">
                        <string notr="true">QLabel{
@@ -908,7 +908,7 @@ Keeping tails wagging and hearts happy!</string>
             <number>0</number>
            </property>
            <property name="sizeConstraint">
-            <enum>QLayout::SetDefaultConstraint</enum>
+            <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
            </property>
            <item>
             <widget class="QFrame" name="frame_2">
@@ -916,10 +916,10 @@ Keeping tails wagging and hearts happy!</string>
               <string notr="true"/>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout">
               <item>
@@ -952,7 +952,7 @@ color:rgb(39, 39, 39);
                  <bool>true</bool>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignCenter</set>
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
                 </property>
                 <property name="wordWrap">
                  <bool>false</bool>
@@ -977,10 +977,10 @@ color:rgb(39, 39, 39);
               </size>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
               <property name="leftMargin">
@@ -1018,10 +1018,10 @@ color:rgb(39, 39, 39);</string>
                  <string notr="true"/>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_3" columnstretch="8,8,8">
                  <item row="0" column="0">
@@ -1158,10 +1158,10 @@ color:rgb(39, 39, 39);</string>
                  <string notr="true"/>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_4">
                  <item row="1" column="3">
@@ -1184,7 +1184,7 @@ color:rgb(39, 39, 39);</string>
                     </size>
                    </property>
                    <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QComboBox {
@@ -1290,7 +1290,7 @@ color:rgb(39, 39, 39);</string>
                     </size>
                    </property>
                    <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QComboBox {
@@ -1402,7 +1402,7 @@ color:rgb(39, 39, 39);</string>
                     </size>
                    </property>
                    <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QComboBox {
@@ -1503,10 +1503,10 @@ QComboBox QAbstractItemView QScrollBar::groove {
                  <string notr="true"/>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_5" columnstretch="8,8,8">
                  <item row="1" column="0">
@@ -1614,7 +1614,7 @@ color:rgb(39, 39, 39);</string>
                 </layout>
                </widget>
               </item>
-              <item alignment="Qt::AlignHCenter">
+              <item alignment="Qt::AlignmentFlag::AlignHCenter">
                <widget class="QPushButton" name="confirmButton">
                 <property name="minimumSize">
                  <size>
@@ -1663,7 +1663,7 @@ QPushButton:hover{
            <string notr="true">background:transparent;</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_10">
-           <item alignment="Qt::AlignTop">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
             <widget class="QFrame" name="PersonalRecords">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -1675,10 +1675,10 @@ QPushButton:hover{
               <string notr="true"/>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_5">
               <item>
@@ -1711,7 +1711,7 @@ color:rgb(39, 39, 39);
                  <bool>true</bool>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignCenter</set>
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
                 </property>
                 <property name="wordWrap">
                  <bool>false</bool>
@@ -1721,7 +1721,7 @@ color:rgb(39, 39, 39);
              </layout>
             </widget>
            </item>
-           <item alignment="Qt::AlignRight|Qt::AlignTop">
+           <item alignment="Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTop">
             <widget class="QFrame" name="searchframe">
              <property name="styleSheet">
               <string notr="true"/>
@@ -1731,7 +1731,7 @@ color:rgb(39, 39, 39);
                <number>0</number>
               </property>
               <property name="sizeConstraint">
-               <enum>QLayout::SetDefaultConstraint</enum>
+               <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
               </property>
               <item>
                <widget class="QLineEdit" name="searchBar">
@@ -1772,10 +1772,10 @@ border-bottom-right-radius:10px;
 </string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_6">
                  <property name="spacing">
@@ -1867,8 +1867,8 @@ border-bottom-right-radius:10px;
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>874</width>
-                <height>500</height>
+                <width>100</width>
+                <height>30</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -1879,7 +1879,7 @@ border-bottom-right-radius:10px;
                 <number>5</number>
                </property>
                <property name="sizeConstraint">
-                <enum>QLayout::SetMinimumSize</enum>
+                <enum>QLayout::SizeConstraint::SetMinimumSize</enum>
                </property>
                <property name="leftMargin">
                 <number>0</number>
@@ -1907,16 +1907,16 @@ border-bottom-right-radius:10px;
 }</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_13">
-           <item alignment="Qt::AlignTop">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
             <widget class="QFrame" name="frame_4">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_8">
               <item>
@@ -1949,7 +1949,7 @@ color:rgb(39, 39, 39);
                  <bool>true</bool>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignCenter</set>
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
                 </property>
                 <property name="wordWrap">
                  <bool>false</bool>
@@ -1959,22 +1959,22 @@ color:rgb(39, 39, 39);
              </layout>
             </widget>
            </item>
-           <item alignment="Qt::AlignTop">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
             <widget class="QFrame" name="frame_5">
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_11">
               <item>
                <widget class="QFrame" name="frame_6">
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_12">
                  <property name="leftMargin">
@@ -2048,7 +2048,7 @@ QPushButton:checked {
                 </layout>
                </widget>
               </item>
-              <item alignment="Qt::AlignRight|Qt::AlignTop">
+              <item alignment="Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTop">
                <widget class="QFrame" name="searchframe_2">
                 <property name="styleSheet">
                  <string notr="true"/>
@@ -2058,7 +2058,7 @@ QPushButton:checked {
                   <number>0</number>
                  </property>
                  <property name="sizeConstraint">
-                  <enum>QLayout::SetDefaultConstraint</enum>
+                  <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
                  </property>
                  <item>
                   <widget class="QLineEdit" name="searchBar_2">
@@ -2099,10 +2099,10 @@ border-bottom-right-radius:10px;
 </string>
                    </property>
                    <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
+                    <enum>QFrame::Shape::StyledPanel</enum>
                    </property>
                    <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
+                    <enum>QFrame::Shadow::Raised</enum>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_10">
                     <property name="spacing">
@@ -2237,8 +2237,8 @@ border-bottom-right-radius:10px;
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>874</width>
-                    <height>480</height>
+                    <width>88</width>
+                    <height>34</height>
                    </rect>
                   </property>
                   <property name="styleSheet">
