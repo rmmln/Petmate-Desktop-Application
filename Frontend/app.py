@@ -53,7 +53,14 @@ class MainUI(QMainWindow):
         #changing page walkIn/website appointment
         self.walkInBtn.clicked.connect(lambda: self.walkInOrWeb.setCurrentIndex(0))
         self.websiteBtn.clicked.connect(lambda: self.walkInOrWeb.setCurrentIndex(1))
+        #backbutton in profile page
+        self.profileBackbutton.clicked.connect(lambda: self.navigate_to_page(2))
 
+
+
+
+    def navigate_to_page(self, index):
+        self.stackedWidget.setCurrentIndex(index)
 
 
     def submit_data(self):
@@ -355,8 +362,12 @@ class MainUI(QMainWindow):
             card.nameLabel.setText(f"{patient['firstName']} {patient['lastName']}")
             card.emailLabel.setText(patient['email'])
 
-            # Connect the delete button
+            # Connect delete button
             card.deleteButton.clicked.connect(lambda _, p_id=patient['id']: self.delete_patient(p_id))
+
+            # Connect the card click to open profile
+            card.mousePressEvent = lambda event, p=patient: self.show_patient_profile(p)
+
             self.patientListLayout.insertWidget(0, card)
 
     def delete_patient(self, patient_id):
@@ -372,8 +383,21 @@ class MainUI(QMainWindow):
                 toast = Toast(self, "Failed to delete!", icon_path="Icons/warning.png")
                 toast.show_toast()
 
-    def navigate_to_page(self, index):
-        self.stackedWidget.setCurrentIndex(index)
+    def show_patient_profile(self, patient):
+        full_name = f"{patient['firstName']} {patient['lastName']}"
+        self.profileNameLabel.setText(full_name)
+        self.profileEmailLabel.setText(patient['email'])
+
+        # Combine address parts
+        address = f"{patient['barangay']}, {patient['city']}, {patient['province']}"
+        self.addressLabel.setText(address)
+
+        self.phoneLabel.setText(patient['phoneNumber'])
+
+        # Navigate to the profile page
+        self.stackedWidget.setCurrentIndex(5)
+
+
 
 
 if __name__ == "__main__":
