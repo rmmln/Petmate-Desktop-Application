@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QLineEdit, QWidget,QComboBox,QButtonGroup
+from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QLineEdit, QWidget,QComboBox,QButtonGroup,QMessageBox
 from PyQt6 import uic
 from PyQt6.QtCore import Qt
 import resources_rc
@@ -354,7 +354,23 @@ class MainUI(QMainWindow):
             card = uic.loadUi("PatientCard.ui")
             card.nameLabel.setText(f"{patient['firstName']} {patient['lastName']}")
             card.emailLabel.setText(patient['email'])
+
+            # Connect the delete button
+            card.deleteButton.clicked.connect(lambda _, p_id=patient['id']: self.delete_patient(p_id))
             self.patientListLayout.insertWidget(0, card)
+
+    def delete_patient(self, patient_id):
+        reply = QMessageBox.question(self, "Delete", "Are you sure you want to delete this patient?",
+                                     QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+        if reply == QMessageBox.StandardButton.Yes:
+            response = requests.delete(f"http://127.0.0.1:8000/api/patients/{patient_id}/")
+            if response.status_code == 204:
+                toast = Toast(self, "Deleted successfully!", icon_path="Icons/check.png")
+                toast.show_toast()
+                self.load_patients()
+            else:
+                toast = Toast(self, "Failed to delete!", icon_path="Icons/warning.png")
+                toast.show_toast()
 
     def navigate_to_page(self, index):
         self.stackedWidget.setCurrentIndex(index)
