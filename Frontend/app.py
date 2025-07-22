@@ -56,6 +56,10 @@ class MainUI(QMainWindow):
         #backbutton in profile page
         self.profileBackbutton.clicked.connect(lambda: self.navigate_to_page(2))
 
+        self.selected_patient_id = None
+        #for delete button in profile page
+        self.profileDeleteBtn.clicked.connect(self.delete_selected_patient)
+
 
 
 
@@ -363,25 +367,42 @@ class MainUI(QMainWindow):
             card.emailLabel.setText(patient['email'])
 
             # Connect delete button
-            card.deleteButton.clicked.connect(lambda _, p_id=patient['id']: self.delete_patient(p_id))
-
+            card.deleteButton.clicked.connect(lambda _, p_id=patient['id']: self.confirm_and_delete(p_id))
             # Connect the card click to open profile
             card.mousePressEvent = lambda event, p=patient: self.show_patient_profile(p)
 
             self.patientListLayout.insertWidget(0, card)
 
     def delete_patient(self, patient_id):
-        reply = QMessageBox.question(self, "Delete", "Are you sure you want to delete this patient?",
-                                     QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+        response = requests.delete(f"http://127.0.0.1:8000/api/patients/{patient_id}/")
+        if response.status_code == 204:
+            toast = Toast(self, "Deleted successfully!", icon_path="Icons/check.png")
+            toast.show_toast()
+            self.load_patients()
+        else:
+            toast = Toast(self, "Failed to delete!", icon_path="Icons/warning.png")
+            toast.show_toast()
+
+    def delete_selected_patient(self):
+        if self.selected_patient_id is None:
+            QMessageBox.warning(self, "Error", "No patient selected.")
+            return
+
+        reply = QMessageBox.question(
+            self, "Delete", "Are you sure you want to delete this patient?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+        )
         if reply == QMessageBox.StandardButton.Yes:
-            response = requests.delete(f"http://127.0.0.1:8000/api/patients/{patient_id}/")
-            if response.status_code == 204:
-                toast = Toast(self, "Deleted successfully!", icon_path="Icons/check.png")
-                toast.show_toast()
-                self.load_patients()
-            else:
-                toast = Toast(self, "Failed to delete!", icon_path="Icons/warning.png")
-                toast.show_toast()
+            self.delete_patient(self.selected_patient_id)
+            self.stackedWidget.setCurrentIndex(2)  # go back to patient records
+
+    def confirm_and_delete(self, patient_id):
+        reply = QMessageBox.question(
+            self, "Delete", "Are you sure you want to delete this patient?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+        )
+        if reply == QMessageBox.StandardButton.Yes:
+            self.delete_patient(patient_id)
 
     def show_patient_profile(self, patient):
         full_name = f"{patient['firstName']} {patient['lastName']}"
@@ -393,6 +414,8 @@ class MainUI(QMainWindow):
         self.addressLabel.setText(address)
 
         self.phoneLabel.setText(patient['phoneNumber'])
+
+        self.selected_patient_id = patient['id']
 
         # Navigate to the profile page
         self.stackedWidget.setCurrentIndex(5)
