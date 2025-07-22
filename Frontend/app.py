@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QLineEdit, QWidget,QComboBox
+from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QLineEdit, QWidget,QComboBox,QButtonGroup
 from PyQt6 import uic
 from PyQt6.QtCore import Qt
 import resources_rc
@@ -38,6 +38,21 @@ class MainUI(QMainWindow):
 
         self.confirmButton.clicked.connect(self.submit_data)
 
+        #Appointment Buttons
+        # Make buttons checkable
+        self.walkInBtn.setCheckable(True)
+        self.websiteBtn.setCheckable(True)
+        # Create a QButtonGroup to keep only one active
+        self.sourceBtnGroup = QButtonGroup(self)
+        self.sourceBtnGroup.setExclusive(True)
+
+        self.sourceBtnGroup.addButton(self.walkInBtn)
+        self.sourceBtnGroup.addButton(self.websiteBtn)
+
+        self.walkInBtn.setChecked(True)
+        #changing page walkIn/website appointment
+        self.walkInBtn.clicked.connect(lambda: self.walkInOrWeb.setCurrentIndex(0))
+        self.websiteBtn.clicked.connect(lambda: self.walkInOrWeb.setCurrentIndex(1))
 
 
 
