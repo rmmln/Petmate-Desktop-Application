@@ -1930,8 +1930,8 @@ border-bottom-right-radius:10px;
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>72</width>
-                <height>16</height>
+                <width>874</width>
+                <height>500</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -2336,8 +2336,8 @@ border-bottom-right-radius:10px;
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>65</width>
-                    <height>31</height>
+                    <width>874</width>
+                    <height>393</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_17">
@@ -2511,7 +2511,7 @@ border-bottom-right-radius:10px;
                  <item>
                   <widget class="QLabel" name="profileNameLabel">
                    <property name="styleSheet">
-                    <string notr="true">font: 81 14pt &quot;Montserrat ExtraBold&quot;;
+                    <string notr="true">font: 81 16pt &quot;Montserrat ExtraBold&quot;;
 color:rgb(0, 0, 0);</string>
                    </property>
                    <property name="text">
@@ -2522,7 +2522,7 @@ color:rgb(0, 0, 0);</string>
                  <item>
                   <widget class="QLabel" name="profileEmailLabel">
                    <property name="styleSheet">
-                    <string notr="true">font: 63 14pt &quot;Montserrat Light&quot;;
+                    <string notr="true">font: 63 12pt &quot;Montserrat Light&quot;;
 color:rgb(58, 58, 58);</string>
                    </property>
                    <property name="text">
@@ -2533,7 +2533,7 @@ color:rgb(58, 58, 58);</string>
                  <item>
                   <widget class="QLabel" name="addressLabel">
                    <property name="styleSheet">
-                    <string notr="true">font: 63 14pt &quot;Montserrat Light&quot;;
+                    <string notr="true">font: 63 12pt &quot;Montserrat Light&quot;;
 color:rgb(58, 58, 58);</string>
                    </property>
                    <property name="text">
@@ -2542,13 +2542,24 @@ color:rgb(58, 58, 58);</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="phoneLabel">
+                  <widget class="QLabel" name="detailedAddressLabel">
                    <property name="styleSheet">
-                    <string notr="true">font: 63 14pt &quot;Montserrat Light&quot;;
+                    <string notr="true">font: 63 12pt &quot;Montserrat Light&quot;;
 color:rgb(58, 58, 58);</string>
                    </property>
                    <property name="text">
-                    <string>+639272483891</string>
+                    <string>Detailed Address</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="phoneLabel">
+                   <property name="styleSheet">
+                    <string notr="true">font: 63 12pt &quot;Montserrat Light&quot;;
+color:rgb(58, 58, 58);</string>
+                   </property>
+                   <property name="text">
+                    <string>09272483891</string>
                    </property>
                   </widget>
                  </item>
@@ -2710,7 +2721,7 @@ color:rgb(58, 58, 58);</string>
                 <number>0</number>
                </property>
                <property name="topMargin">
-                <number>20</number>
+                <number>0</number>
                </property>
                <property name="rightMargin">
                 <number>0</number>
@@ -2721,7 +2732,40 @@ color:rgb(58, 58, 58);</string>
                <item>
                 <widget class="QScrollArea" name="scrollArea_3">
                  <property name="styleSheet">
-                  <string notr="true">border:none;</string>
+                  <string notr="true">#scrollArea_3{
+	border:none;
+
+}
+#scrollArea_3 QScrollBar:vertical {
+    background: transparent; /* or any background */
+    width: 10px;
+    margin: 0px;
+}
+
+#scrollArea_3 QScrollBar::handle:vertical {
+    background-color: rgb(129, 191, 218);
+    border-radius: 5px;
+    min-height: 120px;
+	min-height: 200px;
+}
+
+#scrollArea_3 QScrollBar::handle:vertical:hover {
+    background-color: rgb(86, 127, 145);
+}
+
+#scrollArea_3 QScrollBar::add-line:vertical,
+#scrollArea_3 QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: none;
+    border: none;
+}
+
+#scrollArea_3 QScrollBar::groove:vertical {
+    background: transparent;
+    border: none;
+    border-radius: 0px;
+}
+</string>
                  </property>
                  <property name="widgetResizable">
                   <bool>true</bool>
@@ -2732,7 +2776,7 @@ color:rgb(58, 58, 58);</string>
                     <x>0</x>
                     <y>0</y>
                     <width>812</width>
-                    <height>410</height>
+                    <height>417</height>
                    </rect>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_6">

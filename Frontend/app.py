@@ -47,22 +47,23 @@ class MainUI(QMainWindow):
         # Make buttons checkable
         self.walkInBtn.setCheckable(True)
         self.websiteBtn.setCheckable(True)
+
         # Create a QButtonGroup to keep only one active
         self.sourceBtnGroup = QButtonGroup(self)
         self.sourceBtnGroup.setExclusive(True)
-
         self.sourceBtnGroup.addButton(self.walkInBtn)
         self.sourceBtnGroup.addButton(self.websiteBtn)
-
         self.walkInBtn.setChecked(True)
+
         #changing page walkIn/website appointment
         self.walkInBtn.clicked.connect(lambda: self.walkInOrWeb.setCurrentIndex(0))
         self.websiteBtn.clicked.connect(lambda: self.walkInOrWeb.setCurrentIndex(1))
+
         #backbutton in profile page
         self.profileBackbutton.clicked.connect(lambda: self.navigate_to_page(2))
-        self.profileBackbutton.clicked.connect(lambda: self.profileStackedWidget.setCurrentIndex(0))
-
+        self.profileBackbutton.clicked.connect(lambda: self.cancelBtn())
         self.selected_patient_id = None
+
         #for delete button in profile page
         self.profileDeleteBtn.clicked.connect(self.delete_selected_patient)
 
@@ -85,8 +86,9 @@ class MainUI(QMainWindow):
         self.addpetQtoolBtn.clicked.connect(lambda: self.profileStackedWidget.setCurrentIndex(1))
         self.plusSignBtn.clicked.connect(lambda: self.profileStackedWidget.setCurrentIndex(1))
         self.addPetButton.mousePressEvent = lambda event: self.profileStackedWidget.setCurrentIndex(1)
+
         # cancelBtn
-        self.backBtn.clicked.connect(lambda: self.profileStackedWidget.setCurrentIndex(0))
+        self.backBtn.clicked.connect(lambda: self.cancelBtn())
 
         # setup grid layout para sa pet cards
         self.gridLayout_6.setAlignment(Qt.AlignmentFlag.AlignTop)
@@ -224,9 +226,8 @@ class MainUI(QMainWindow):
             self.petName.clear()
             self.petColor.clear()
             self.breed.clear()
-            self.speciesComboBox.clear()
             self.age.clear()
-            self.petSexComboBox.clear()
+
 
             self.speciesComboBox.setCurrentIndex(0)
             self.petSexComboBox.setCurrentIndex(0)
@@ -247,8 +248,14 @@ class MainUI(QMainWindow):
 
 
 
-
-
+    def cancelBtn(self):
+        self.profileStackedWidget.setCurrentIndex(0)
+        self.petName.clear()
+        self.petColor.clear()
+        self.breed.clear()
+        self.age.clear()
+        self.speciesComboBox.setCurrentIndex(0)
+        self.petSexComboBox.setCurrentIndex(0)
 
 
 
@@ -345,9 +352,10 @@ class MainUI(QMainWindow):
 
         # Combine address parts
         address = f"{patient['barangay']}, {patient['city']}, {patient['province']}"
+        contactNumbers = f"{patient['phoneNumber']}  / {patient['emergencyNumber']}"
         self.addressLabel.setText(address)
-
-        self.phoneLabel.setText(patient['phoneNumber'])
+        self.detailedAddressLabel.setText(patient['detailedAddress'])
+        self.phoneLabel.setText(contactNumbers)
 
         self.selected_patient_id = patient['id']
 
