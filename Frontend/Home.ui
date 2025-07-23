@@ -1930,8 +1930,8 @@ border-bottom-right-radius:10px;
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>100</width>
-                <height>30</height>
+                <width>72</width>
+                <height>16</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -2336,7 +2336,7 @@ border-bottom-right-radius:10px;
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>83</width>
+                    <width>65</width>
                     <height>31</height>
                    </rect>
                   </property>
@@ -2699,7 +2699,7 @@ color:rgb(58, 58, 58);</string>
            <item>
             <widget class="QStackedWidget" name="profileStackedWidget">
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="petCardsPage">
               <layout class="QVBoxLayout" name="verticalLayout_20">
@@ -2731,15 +2731,18 @@ color:rgb(58, 58, 58);</string>
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>374</width>
-                    <height>118</height>
+                    <width>812</width>
+                    <height>410</height>
                    </rect>
                   </property>
-                  <layout class="QFormLayout" name="formLayout">
-                   <item row="0" column="0">
+                  <layout class="QGridLayout" name="gridLayout_6">
+                   <property name="spacing">
+                    <number>10</number>
+                   </property>
+                   <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
                     <widget class="QFrame" name="addPetButton">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -2927,7 +2930,7 @@ color:rgb(39, 39, 39);</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit">
+                      <widget class="QLineEdit" name="petName">
                        <property name="minimumSize">
                         <size>
                          <width>174</width>
@@ -2951,7 +2954,7 @@ color:rgb(39, 39, 39);</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QFrame" name="petColor">
+                   <widget class="QFrame" name="petColorFrame">
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
                     </property>
@@ -2983,7 +2986,7 @@ color:rgb(39, 39, 39);</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit_2">
+                      <widget class="QLineEdit" name="petColor">
                        <property name="minimumSize">
                         <size>
                          <width>174</width>
@@ -3069,7 +3072,7 @@ color:rgb(39, 39, 39);</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit_5">
+                      <widget class="QLineEdit" name="breed">
                        <property name="minimumSize">
                         <size>
                          <width>174</width>
@@ -3283,7 +3286,7 @@ QComboBox QLineEdit {
                    <number>0</number>
                   </property>
                   <item>
-                   <widget class="QFrame" name="birthdayFrame">
+                   <widget class="QFrame" name="ageFrame">
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
                     </property>
@@ -3315,7 +3318,7 @@ color:rgb(39, 39, 39);</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLineEdit" name="lineEdit_7">
+                      <widget class="QLineEdit" name="age">
                        <property name="minimumSize">
                         <size>
                          <width>174</width>
@@ -3374,7 +3377,7 @@ color:rgb(39, 39, 39);</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QComboBox" name="petSexBox">
+                      <widget class="QComboBox" name="petSexComboBox">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                          <horstretch>0</horstretch>
@@ -3549,7 +3552,7 @@ QPushButton:hover{
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="confirmButton_2">
+                   <widget class="QPushButton" name="petConfirmButton">
                     <property name="minimumSize">
                      <size>
                       <width>174</width>

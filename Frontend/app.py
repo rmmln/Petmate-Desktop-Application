@@ -6,7 +6,8 @@ from PyQt6.QtGui import QFontDatabase, QFont, QPixmap, QIcon, QAction,QColor
 from uiLogic import UIHandler
 from input_styles import *
 from toast import Toast
-from Backend.api_client import add_new_patient
+from Backend.api_client import add_new_patient, add_new_pet
+from confirm_card import ConfirmCard
 import requests
 import os
 import sys
@@ -21,7 +22,7 @@ class MainUI(QMainWindow):
         self.ui_handler = UIHandler(self.provinceComboBox, self.cityComboBox, self.barangayComboBox)
         self.ui_handler.load_provinces()
 
-        # 👉 Set layout before loading patients
+        # Set layout before loading patients
         self.patientListLayout = self.scrollAreaWidgetContents.layout()
         self.patientListLayout.setSpacing(10)  # spacing between cards
         self.patientListLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
@@ -37,7 +38,10 @@ class MainUI(QMainWindow):
         self.appointmentBtn.clicked.connect(lambda: self.navigate_to_page(3))
         self.schedVaxBtn.clicked.connect(lambda: self.navigate_to_page(4))
 
+        # send owner data to db
         self.confirmButton.clicked.connect(self.submit_data)
+        # send pet data to db
+        self.petConfirmButton.clicked.connect(self.submit_pet_data)
 
         #Appointment Buttons
         # Make buttons checkable
@@ -62,6 +66,20 @@ class MainUI(QMainWindow):
         #for delete button in profile page
         self.profileDeleteBtn.clicked.connect(self.delete_selected_patient)
 
+        # Create confirm card instance para sa delete
+        self.confirmCard = ConfirmCard(self)
+        self.confirmCard.hide()  # hide initially
+
+        # Add sa layout o manual add para overlay
+        self.confirmCard = ConfirmCard(self.findChild(QWidget, "MainContent"))
+        self.confirmCard.hide()
+
+        # Connect buttons
+        self.confirmCard.yesButton.clicked.connect(self.really_delete_patient)
+        self.confirmCard.noButton.clicked.connect(self.cancel_delete)
+
+        self.patientToDelete = None
+
         #add pet button navigation
         self.profileStackedWidget.setCurrentIndex(0)
         self.addpetQtoolBtn.clicked.connect(lambda: self.profileStackedWidget.setCurrentIndex(1))
@@ -70,26 +88,22 @@ class MainUI(QMainWindow):
         # cancelBtn
         self.backBtn.clicked.connect(lambda: self.profileStackedWidget.setCurrentIndex(0))
 
+        # setup grid layout para sa pet cards
+        self.gridLayout_6.setAlignment(Qt.AlignmentFlag.AlignTop)
+
+
+        # add the addPetButton as first item, fixed place
+        self.gridLayout_6.addWidget(self.addPetButton, 0, 0)
+
+
+
 
 
 
     def navigate_to_page(self, index):
         self.stackedWidget.setCurrentIndex(index)
 
-
-    def submit_data(self):
-        required_fields = {
-            "First Name": self.firstNameEdit,
-            "Last Name": self.lastNameEdit,
-            "Phone Number": self.phoneNumberEdit,
-            "Province": self.provinceComboBox,
-            "City": self.cityComboBox,
-            "Barangay": self.barangayComboBox,
-            "Detailed Address": self.detailedAddressEdit,
-            "Email": self.emailEdit,
-            "Emergency Number": self.emergencyNoEdit
-        }
-
+    def collect_and_validate_fields(self, required_fields):
         missing = []
 
         def apply_style(widget, error=False):
@@ -105,15 +119,16 @@ class MainUI(QMainWindow):
                 else:
                     widget.setStyleSheet(default_style)
 
+        data = {}
         for name, widget in required_fields.items():
             is_combobox = "QComboBox" in widget.__class__.__name__
-
             if is_combobox:
-                if widget.currentIndex() == 0:  # user didn't select a valid item
+                if widget.currentIndex() == 0:
                     apply_style(widget, error=True)
                     missing.append(name)
                 else:
                     apply_style(widget, error=False)
+                    data[name] = widget.currentText()
             else:
                 text = widget.text()
                 if not text.strip():
@@ -121,6 +136,24 @@ class MainUI(QMainWindow):
                     missing.append(name)
                 else:
                     apply_style(widget, error=False)
+                    data[name] = text.strip()
+
+        return data, missing
+
+    def submit_data(self):
+        required_fields = {
+            "firstName": self.firstNameEdit,
+            "lastName": self.lastNameEdit,
+            "phoneNumber": self.phoneNumberEdit,
+            "province": self.provinceComboBox,
+            "city": self.cityComboBox,
+            "barangay": self.barangayComboBox,
+            "detailedAddress": self.detailedAddressEdit,
+            "email": self.emailEdit,
+            "emergencyNumber": self.emergencyNoEdit
+        }
+
+        data, missing = self.collect_and_validate_fields(required_fields)
 
         if missing:
             message = "The following fields are required:\n• " + "\n• ".join(missing)
@@ -128,19 +161,7 @@ class MainUI(QMainWindow):
             toast.show_toast()
             return
 
-        # ✅ If all good, save and show success
-        data = {
-            "firstName": self.firstNameEdit.text(),
-            "lastName": self.lastNameEdit.text(),
-            "phoneNumber": self.phoneNumberEdit.text(),
-            "province": self.provinceComboBox.currentText(),
-            "city": self.cityComboBox.currentText(),
-            "barangay": self.barangayComboBox.currentText(),
-            "detailedAddress": self.detailedAddressEdit.text(),
-            "email": self.emailEdit.text(),
-            "emergencyNumber": self.emergencyNoEdit.text()
-        }
-
+        # proceed to save patient
         if add_new_patient(data):
             self.navigate_to_page(2)
             self.load_patients()
@@ -173,6 +194,66 @@ class MainUI(QMainWindow):
             toast = Toast(self, "Failed to add patient!", icon_path="Icons/warning.png")
             toast.show_toast()
 
+
+    def submit_pet_data(self):
+        required_fields = {
+            "petName": self.petName,
+            "petColor": self.petColor,
+            "breed": self.breed,
+            "species": self.speciesComboBox,
+            "age":self.age,
+            "sex": self.petSexComboBox
+        }
+
+        data, missing = self.collect_and_validate_fields(required_fields)
+
+        if missing:
+            message = "The following fields are required:\n• " + "\n• ".join(missing)
+            toast = Toast(self, message, icon_path="Icons/warning.png")
+            toast.show_toast()
+            return
+
+        # Add owner_id sa data
+        data["owner"] = self.selected_patient_id
+
+        # Call your API: e.g. add_new_pet(data)
+        if add_new_pet(data):
+            self.profileStackedWidget.setCurrentIndex(0)
+            self.load_pets_for_owner(self.selected_patient_id)
+
+            self.petName.clear()
+            self.petColor.clear()
+            self.breed.clear()
+            self.speciesComboBox.clear()
+            self.age.clear()
+            self.petSexComboBox.clear()
+
+            self.speciesComboBox.setCurrentIndex(0)
+            self.petSexComboBox.setCurrentIndex(0)
+
+            for widget in required_fields.values():
+                if isinstance(widget, QLineEdit):
+                    widget.setStyleSheet(default_style)
+                elif isinstance(widget, QComboBox):
+                    widget.setStyleSheet(default_combobox_style)
+
+            toast = Toast(self, icon_path="Icons/check.png")
+            toast.show_toast()
+
+
+        else:
+            toast = Toast(self, "Failed to add pet!", icon_path="Icons/warning.png")
+            toast.show_toast()
+
+
+
+
+
+
+
+
+
+
     def load_patients(self):
         response = requests.get("http://127.0.0.1:8000/api/patients/")
         if response.status_code == 200:
@@ -198,6 +279,32 @@ class MainUI(QMainWindow):
 
             self.patientListLayout.insertWidget(0, card)
 
+    def load_pets_for_owner(self, owner_id):
+        response = requests.get(f"http://127.0.0.1:8000/api/pets/?owner_id={owner_id}")
+        pets = response.json() if response.status_code == 200 else []
+
+        # clear pet cards lang, wag galawin addPetButton
+        # remove lahat except first item (assumed addPetButton)
+        while self.gridLayout_6.count() > 1:
+            item = self.gridLayout_6.takeAt(1)  # index 1 onwards
+            if item and item.widget():
+                item.widget().deleteLater()
+
+        # place pet cards starting from col=1
+        row = 0
+        col = 1
+        max_cols = 2
+
+        for pet in pets:
+            pet_card = uic.loadUi("petRecordCard.ui")
+            pet_card.petNameCard.setText(pet["petName"])
+
+            self.gridLayout_6.addWidget(pet_card, row, col)
+            col += 1
+            if col >= max_cols:
+                col = 0
+                row += 1
+
     def delete_patient(self, patient_id):
         response = requests.delete(f"http://127.0.0.1:8000/api/patients/{patient_id}/")
         if response.status_code == 204:
@@ -213,21 +320,23 @@ class MainUI(QMainWindow):
             QMessageBox.warning(self, "Error", "No patient selected.")
             return
 
-        reply = QMessageBox.question(
-            self, "Delete", "Are you sure you want to delete this patient?",
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
-        )
-        if reply == QMessageBox.StandardButton.Yes:
-            self.delete_patient(self.selected_patient_id)
-            self.stackedWidget.setCurrentIndex(2)  # go back to patient records
+        self.patientToDelete = self.selected_patient_id
+        self.confirmCard.show()
 
     def confirm_and_delete(self, patient_id):
-        reply = QMessageBox.question(
-            self, "Delete", "Are you sure you want to delete this patient?",
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
-        )
-        if reply == QMessageBox.StandardButton.Yes:
-            self.delete_patient(patient_id)
+        self.patientToDelete = patient_id
+        self.confirmCard.show_card()
+
+    def really_delete_patient(self):
+        if self.patientToDelete is not None:
+            self.delete_patient(self.patientToDelete)
+            self.patientToDelete = None
+            self.stackedWidget.setCurrentIndex(2)
+        self.confirmCard.hide()
+
+    def cancel_delete(self):
+        self.patientToDelete = None
+        self.confirmCard.hide()
 
     def show_patient_profile(self, patient):
         full_name = f"{patient['firstName']} {patient['lastName']}"
@@ -242,6 +351,7 @@ class MainUI(QMainWindow):
 
         self.selected_patient_id = patient['id']
 
+        self.load_pets_for_owner(self.selected_patient_id)
         # Navigate to the profile page
         self.stackedWidget.setCurrentIndex(5)
 

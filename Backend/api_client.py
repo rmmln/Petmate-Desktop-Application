@@ -18,6 +18,24 @@ def add_new_patient(data):
         print("Error:", e)
         return False
 
+
+def add_new_pet(data):
+    """
+    data: dict with all patient info
+    """
+    try:
+        response = requests.post(f"{BASE_URL}/pets/", json=data)
+        if response.status_code == 201:
+            print("Successfully added!")
+            return True
+        else:
+            print("Failed to add patient:", response.status_code, response.text)
+            return False
+    except Exception as e:
+        print("Error:", e)
+        return False
+
+
 def get_all_patients():
     try:
         response = requests.get(f"{BASE_URL}/patients/")

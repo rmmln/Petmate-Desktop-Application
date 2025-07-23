@@ -44,6 +44,10 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QFrame" name="frame_2">
+        <property name="styleSheet">
+         <string notr="true">background-color:transparent;
+border:none;</string>
+        </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -56,6 +60,8 @@
            <property name="styleSheet">
             <string notr="true">#confirmationMessage{
 	font: 57 16pt &quot;Montserrat Medium&quot;;
+	color:rgb(39, 39, 39);
+
 }</string>
            </property>
            <property name="text">
@@ -72,6 +78,11 @@ this record?</string>
       </item>
       <item alignment="Qt::AlignHCenter">
        <widget class="QFrame" name="frame">
+        <property name="styleSheet">
+         <string notr="true">
+background-color:transparent;
+border:none;</string>
+        </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -94,6 +105,7 @@ this record?</string>
             <string notr="true">#yesButton{
 	padding:5px 25px;
 	font: 57 12pt &quot;Montserrat Medium&quot;;
+	color:rgb(39, 39, 39);
 	border:none;
 	border-bottom:1px solid rgb(190, 190, 190);
 	border-radius:10px;
@@ -120,6 +132,7 @@ this record?</string>
             <string notr="true">#noButton{
 	padding:5px 25px;
 	font: 57 12pt &quot;Montserrat Medium&quot;;
+	color:rgb(39, 39, 39);
 	border:none;
 	border-bottom:1px solid rgb(190, 190, 190);
 	border-radius:10px;
