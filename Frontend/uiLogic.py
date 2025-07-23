@@ -1,6 +1,5 @@
-import requests
+import json, os
 from PyQt6.QtWidgets import QComboBox
-
 
 class UIHandler:
     def __init__(self, provinceComboBox, cityComboBox, barangayComboBox):
@@ -8,61 +7,41 @@ class UIHandler:
         self.cityComboBox = cityComboBox
         self.barangayComboBox = barangayComboBox
 
-        # Connect ComboBox signals to appropriate methods
+
+        base_dir = os.path.dirname(__file__)
+        with open(os.path.join(base_dir, "AddressJSON", "provinces.json"), "r", encoding="utf-8") as f:
+            self.provinces = json.load(f)
+        with open(os.path.join(base_dir, "AddressJSON", "cities.json"), "r", encoding="utf-8") as f:
+            self.cities = json.load(f)
+        with open(os.path.join(base_dir, "AddressJSON", "barangays.json"), "r", encoding="utf-8") as f:
+            self.barangays = json.load(f)
+
         self.provinceComboBox.currentIndexChanged.connect(self.on_province_selected)
         self.cityComboBox.currentIndexChanged.connect(self.on_city_selected)
 
     def load_provinces(self):
-        url = "https://psgc.gitlab.io/api/provinces/"
-        try:
-            response = requests.get(url)
-            if response.status_code == 200:
-                provinces = response.json()
-                self.provinceComboBox.clear()  # Clear the previous items
-                self.provinceComboBox.addItem("Select Province")  # Add default text
-                for prov in provinces:
-                    self.provinceComboBox.addItem(prov["name"], prov["code"])
-        except Exception as e:
-            print("Error loading provinces:", e)
+        self.provinceComboBox.clear()
+        self.provinceComboBox.addItem("Select Province")
+        for prov in sorted(self.provinces, key=lambda x: x["name"]):
+            self.provinceComboBox.addItem(prov["name"], prov["prov_code"])
 
     def on_province_selected(self, index):
+        self.cityComboBox.clear()
+        self.barangayComboBox.clear()
         if index == 0:
-            self.cityComboBox.clear()  # Clear the city ComboBox if no province is selected
-            self.barangayComboBox.clear()  # Clear the barangay ComboBox as well
             return
-
-        province_code = self.provinceComboBox.itemData(index)
-        url = f"https://psgc.gitlab.io/api/provinces/{province_code}/cities-municipalities/"
-        try:
-            response = requests.get(url)
-            if response.status_code == 200:
-                cities = response.json()
-                self.cityComboBox.clear()  # Clear the previous cities
-                self.cityComboBox.addItem("Select City/Municipality")  # Default text
-                for city in cities:
-                    self.cityComboBox.addItem(city["name"], city["code"])
-                self.barangayComboBox.clear()  # Clear barangay ComboBox
-            else:
-                print(f"Failed to fetch cities for province {province_code}")
-        except Exception as e:
-            print("Error loading cities:", e)
+        prov_code = self.provinceComboBox.itemData(index)
+        filtered = sorted([c for c in self.cities if c["prov_code"] == prov_code], key=lambda x: x["name"])
+        self.cityComboBox.addItem("Select City/Municipality")
+        for city in filtered:
+            self.cityComboBox.addItem(city["name"], city["mun_code"])
 
     def on_city_selected(self, index):
+        self.barangayComboBox.clear()
         if index == 0:
-            self.barangayComboBox.clear()  # Clear barangay ComboBox if no city is selected
             return
-
-        city_code = self.cityComboBox.itemData(index)
-        url = f"https://psgc.gitlab.io/api/cities-municipalities/{city_code}/barangays/"
-        try:
-            response = requests.get(url)
-            if response.status_code == 200:
-                barangays = response.json()
-                self.barangayComboBox.clear()  # Clear the previous barangays
-                self.barangayComboBox.addItem("Select Barangay")  # Default text
-                for brgy in barangays:
-                    self.barangayComboBox.addItem(brgy["name"])
-            else:
-                print(f"Failed to fetch barangays for city {city_code}")
-        except Exception as e:
-            print("Error loading barangays:", e)
+        mun_code = self.cityComboBox.itemData(index)
+        filtered = sorted([b for b in self.barangays if b["mun_code"] == mun_code], key=lambda x: x["name"])
+        self.barangayComboBox.addItem("Select Barangay")
+        for brgy in filtered:
+            self.barangayComboBox.addItem(brgy["name"])
