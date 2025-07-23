@@ -60,7 +60,7 @@
            </property>
            <property name="text">
             <string>Are you sure you want to delete 
-this information?</string>
+this record?</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
