@@ -297,10 +297,15 @@ class MainUI(QMainWindow):
             if item and item.widget():
                 item.widget().deleteLater()
 
+        container_width = self.scrollAreaWidgetContents.width()  # or pwede rin yung grid's parent width
+        card_width = 401
+        spacing = 10
+        # compute how many cards kasya (add spacing for each card)
+        max_cols = max(1, (container_width + spacing) // (card_width + spacing))
         # place pet cards starting from col=1
         row = 0
         col = 1
-        max_cols = 2
+
 
         for pet in pets:
             pet_card = uic.loadUi("petRecordCard.ui")
@@ -311,6 +316,11 @@ class MainUI(QMainWindow):
             if col >= max_cols:
                 col = 0
                 row += 1
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        if self.selected_patient_id:
+            self.load_pets_for_owner(self.selected_patient_id)
 
     def delete_patient(self, patient_id):
         response = requests.delete(f"http://127.0.0.1:8000/api/patients/{patient_id}/")
