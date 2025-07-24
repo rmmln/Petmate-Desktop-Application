@@ -291,25 +291,34 @@ class MainUI(QMainWindow):
         pets = response.json() if response.status_code == 200 else []
 
         # clear pet cards lang, wag galawin addPetButton
-        # remove lahat except first item (assumed addPetButton)
         while self.gridLayout_6.count() > 1:
-            item = self.gridLayout_6.takeAt(1)  # index 1 onwards
+            item = self.gridLayout_6.takeAt(1)  # skip first item (addPetButton)
             if item and item.widget():
                 item.widget().deleteLater()
 
-        container_width = self.scrollAreaWidgetContents.width()  # or pwede rin yung grid's parent width
+        container_width = self.scrollAreaWidgetContents.width()
         card_width = 401
         spacing = 10
-        # compute how many cards kasya (add spacing for each card)
         max_cols = max(1, (container_width + spacing) // (card_width + spacing))
-        # place pet cards starting from col=1
-        row = 0
-        col = 1
 
+        row = 0
+        col = 1  # start at col=1, col=0 is your addPetButton
 
         for pet in pets:
             pet_card = uic.loadUi("petRecordCard.ui")
             pet_card.petNameCard.setText(pet["petName"])
+
+            #Dynamic icon by species
+            species = pet.get("species", "").lower()
+            if species == "dog":
+                icon_path = "Icons/dog.png"
+            elif species == "cat":
+                icon_path = "Icons/catIcon.png"
+            else:
+                icon_path = "Icons/otherSpecies.png"
+
+            pet_card.petCardIcon.setPixmap(QPixmap(icon_path))
+            pet_card.petCardIcon.setScaledContents(True)
 
             self.gridLayout_6.addWidget(pet_card, row, col)
             col += 1
