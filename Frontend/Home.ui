@@ -22,6 +22,12 @@
     <height>720</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>PETMATE INFORMATION SYSTEM</string>
   </property>
@@ -96,7 +102,7 @@
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="topMargin">
@@ -105,7 +111,7 @@
        <property name="bottomMargin">
         <number>40</number>
        </property>
-       <item alignment="Qt::AlignHCenter">
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
         <widget class="QLabel" name="PetmateLogo">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -136,7 +142,7 @@
          </property>
         </widget>
        </item>
-       <item alignment="Qt::AlignHCenter">
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
         <widget class="QFrame" name="Buttons">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -162,7 +168,7 @@
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
+          <enum>QFrame::Shape::NoFrame</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
@@ -207,16 +213,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -263,16 +269,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -319,16 +325,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -375,16 +381,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -431,16 +437,16 @@ QToolButton:hover{
              </size>
             </property>
             <property name="popupMode">
-             <enum>QToolButton::DelayedPopup</enum>
+             <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
             </property>
             <property name="toolButtonStyle">
-             <enum>Qt::ToolButtonTextBesideIcon</enum>
+             <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
             </property>
             <property name="autoRaise">
              <bool>false</bool>
             </property>
             <property name="arrowType">
-             <enum>Qt::NoArrow</enum>
+             <enum>Qt::ArrowType::NoArrow</enum>
             </property>
            </widget>
           </item>
@@ -450,7 +456,7 @@ QToolButton:hover{
        <item>
         <spacer name="verticalSpacer_2">
          <property name="orientation">
-          <enum>Qt::Vertical</enum>
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -460,7 +466,7 @@ QToolButton:hover{
          </property>
         </spacer>
        </item>
-       <item alignment="Qt::AlignHCenter">
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
         <widget class="QLabel" name="label">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -500,7 +506,7 @@ QToolButton:hover{
        <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
-          <enum>Qt::Vertical</enum>
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -510,7 +516,7 @@ QToolButton:hover{
          </property>
         </spacer>
        </item>
-       <item alignment="Qt::AlignHCenter">
+       <item alignment="Qt::AlignmentFlag::AlignHCenter">
         <widget class="QToolButton" name="toolButton">
          <property name="minimumSize">
           <size>
@@ -550,7 +556,7 @@ QToolButton:hover{
           </size>
          </property>
          <property name="toolButtonStyle">
-          <enum>Qt::ToolButtonTextBesideIcon</enum>
+          <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
          </property>
         </widget>
        </item>
@@ -573,7 +579,7 @@ QToolButton:hover{
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
+       <enum>QFrame::Shape::NoFrame</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
@@ -585,10 +591,10 @@ QToolButton:hover{
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
+          <enum>QFrame::Shape::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>5</number>
+          <number>3</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -622,10 +628,10 @@ QToolButton:hover{
 }</string>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <property name="spacing">
@@ -670,13 +676,13 @@ QToolButton:hover{
 }</string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::NoFrame</enum>
+                 <enum>QFrame::Shape::NoFrame</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_7">
                  <property name="leftMargin">
                   <number>45</number>
                  </property>
-                 <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                 <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
                   <widget class="QFrame" name="welcome">
                    <property name="styleSheet">
                     <string notr="true">QFrame{
@@ -685,14 +691,14 @@ QToolButton:hover{
 }</string>
                    </property>
                    <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
+                    <enum>QFrame::Shape::NoFrame</enum>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_4">
                     <property name="spacing">
                      <number>20</number>
                     </property>
                     <property name="sizeConstraint">
-                     <enum>QLayout::SetDefaultConstraint</enum>
+                     <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -703,7 +709,7 @@ QToolButton:hover{
                     <property name="rightMargin">
                      <number>0</number>
                     </property>
-                    <item alignment="Qt::AlignTop">
+                    <item alignment="Qt::AlignmentFlag::AlignTop">
                      <widget class="QLabel" name="label_7">
                       <property name="maximumSize">
                        <size>
@@ -726,13 +732,13 @@ Animal Clinic!
 </string>
                       </property>
                       <property name="textFormat">
-                       <enum>Qt::AutoText</enum>
+                       <enum>Qt::TextFormat::AutoText</enum>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
                       </property>
                       <property name="alignment">
-                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
                       </property>
                       <property name="wordWrap">
                        <bool>false</bool>
@@ -742,7 +748,7 @@ Animal Clinic!
                       </property>
                      </widget>
                     </item>
-                    <item alignment="Qt::AlignBottom">
+                    <item alignment="Qt::AlignmentFlag::AlignBottom">
                      <widget class="QLabel" name="label_8">
                       <property name="maximumSize">
                        <size>
@@ -772,10 +778,10 @@ Keeping tails wagging and hearts happy!</string>
                  <item>
                   <widget class="QFrame" name="picture">
                    <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
+                    <enum>QFrame::Shape::NoFrame</enum>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_5">
-                    <item alignment="Qt::AlignRight">
+                    <item alignment="Qt::AlignmentFlag::AlignRight">
                      <widget class="QLabel" name="label_9">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -833,13 +839,13 @@ Keeping tails wagging and hearts happy!</string>
 }</string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::NoFrame</enum>
+                 <enum>QFrame::Shape::NoFrame</enum>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <property name="spacing">
                   <number>10</number>
                  </property>
-                 <item alignment="Qt::AlignHCenter">
+                 <item alignment="Qt::AlignmentFlag::AlignHCenter">
                   <widget class="QFrame" name="appointment_date">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -868,10 +874,10 @@ Keeping tails wagging and hearts happy!</string>
 }</string>
                    </property>
                    <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
+                    <enum>QFrame::Shape::NoFrame</enum>
                    </property>
                    <layout class="QGridLayout" name="gridLayout">
-                    <item row="0" column="0" alignment="Qt::AlignHCenter">
+                    <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
                      <widget class="QLabel" name="label_10">
                       <property name="styleSheet">
                        <string notr="true">QLabel{
@@ -908,7 +914,7 @@ Keeping tails wagging and hearts happy!</string>
             <number>0</number>
            </property>
            <property name="sizeConstraint">
-            <enum>QLayout::SetDefaultConstraint</enum>
+            <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
            </property>
            <item>
             <widget class="QFrame" name="frame_2">
@@ -916,10 +922,10 @@ Keeping tails wagging and hearts happy!</string>
               <string notr="true"/>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout">
               <item>
@@ -952,7 +958,7 @@ color:rgb(39, 39, 39);
                  <bool>true</bool>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignCenter</set>
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
                 </property>
                 <property name="wordWrap">
                  <bool>false</bool>
@@ -977,10 +983,10 @@ color:rgb(39, 39, 39);
               </size>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_9">
               <property name="leftMargin">
@@ -1018,10 +1024,10 @@ color:rgb(39, 39, 39);</string>
                  <string notr="true"/>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_3" columnstretch="8,8,8">
                  <item row="0" column="0">
@@ -1158,10 +1164,10 @@ color:rgb(39, 39, 39);</string>
                  <string notr="true"/>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_4">
                  <item row="1" column="3">
@@ -1190,7 +1196,7 @@ color:rgb(39, 39, 39);</string>
                     </size>
                    </property>
                    <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QComboBox {
@@ -1312,7 +1318,7 @@ color:rgb(39, 39, 39);</string>
                     </size>
                    </property>
                    <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QComboBox {
@@ -1440,7 +1446,7 @@ color:rgb(39, 39, 39);</string>
                     </size>
                    </property>
                    <property name="focusPolicy">
-                    <enum>Qt::NoFocus</enum>
+                    <enum>Qt::FocusPolicy::NoFocus</enum>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QComboBox {
@@ -1535,7 +1541,7 @@ QComboBox QLineEdit {
                     <bool>false</bool>
                    </property>
                    <property name="sizeAdjustPolicy">
-                    <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+                    <enum>QComboBox::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
                    </property>
                    <property name="duplicatesEnabled">
                     <bool>false</bool>
@@ -1560,10 +1566,10 @@ QComboBox QLineEdit {
                  <string notr="true"/>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_5" columnstretch="8,8,8">
                  <item row="1" column="0">
@@ -1671,7 +1677,7 @@ color:rgb(39, 39, 39);</string>
                 </layout>
                </widget>
               </item>
-              <item alignment="Qt::AlignHCenter">
+              <item alignment="Qt::AlignmentFlag::AlignHCenter">
                <widget class="QPushButton" name="confirmButton">
                 <property name="minimumSize">
                  <size>
@@ -1720,7 +1726,7 @@ QPushButton:hover{
            <string notr="true">background:transparent;</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_10">
-           <item alignment="Qt::AlignTop">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
             <widget class="QFrame" name="PersonalRecords">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -1732,10 +1738,10 @@ QPushButton:hover{
               <string notr="true"/>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_5">
               <item>
@@ -1768,7 +1774,7 @@ color:rgb(39, 39, 39);
                  <bool>true</bool>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignCenter</set>
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
                 </property>
                 <property name="wordWrap">
                  <bool>false</bool>
@@ -1778,7 +1784,7 @@ color:rgb(39, 39, 39);
              </layout>
             </widget>
            </item>
-           <item alignment="Qt::AlignRight|Qt::AlignTop">
+           <item alignment="Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTop">
             <widget class="QFrame" name="searchframe">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -1794,7 +1800,7 @@ color:rgb(39, 39, 39);
                <number>0</number>
               </property>
               <property name="sizeConstraint">
-               <enum>QLayout::SetDefaultConstraint</enum>
+               <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
               </property>
               <item>
                <widget class="QLineEdit" name="searchBar">
@@ -1835,10 +1841,10 @@ border-bottom-right-radius:10px;
 </string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_6">
                  <property name="spacing">
@@ -1942,7 +1948,7 @@ border-bottom-right-radius:10px;
                 <number>5</number>
                </property>
                <property name="sizeConstraint">
-                <enum>QLayout::SetMinimumSize</enum>
+                <enum>QLayout::SizeConstraint::SetMinimumSize</enum>
                </property>
                <property name="leftMargin">
                 <number>0</number>
@@ -1970,22 +1976,22 @@ border-bottom-right-radius:10px;
 }</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_13">
-           <item alignment="Qt::AlignTop">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
             <widget class="QFrame" name="frame_4">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_8">
               <item>
                <widget class="QLabel" name="label_13">
                 <property name="styleSheet">
-                 <string notr="true">font: 25pt &quot;Rubik Mono One&quot;;
+                 <string notr="true">font: Bold 25pt &quot;Rubik Mono One&quot;;
 color:rgb(39, 39, 39);
 </string>
                 </property>
@@ -2012,7 +2018,7 @@ color:rgb(39, 39, 39);
                  <bool>true</bool>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignCenter</set>
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
                 </property>
                 <property name="wordWrap">
                  <bool>false</bool>
@@ -2022,22 +2028,22 @@ color:rgb(39, 39, 39);
              </layout>
             </widget>
            </item>
-           <item alignment="Qt::AlignTop">
+           <item alignment="Qt::AlignmentFlag::AlignTop">
             <widget class="QFrame" name="frame_5">
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_11">
               <item>
                <widget class="QFrame" name="frame_6">
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_12">
                  <property name="leftMargin">
@@ -2111,7 +2117,7 @@ QPushButton:checked {
                 </layout>
                </widget>
               </item>
-              <item alignment="Qt::AlignRight|Qt::AlignTop">
+              <item alignment="Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTop">
                <widget class="QFrame" name="searchframe_2">
                 <property name="styleSheet">
                  <string notr="true"/>
@@ -2121,7 +2127,7 @@ QPushButton:checked {
                   <number>0</number>
                  </property>
                  <property name="sizeConstraint">
-                  <enum>QLayout::SetDefaultConstraint</enum>
+                  <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
                  </property>
                  <item>
                   <widget class="QLineEdit" name="searchBar_2">
@@ -2162,10 +2168,10 @@ border-bottom-right-radius:10px;
 </string>
                    </property>
                    <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
+                    <enum>QFrame::Shape::StyledPanel</enum>
                    </property>
                    <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
+                    <enum>QFrame::Shadow::Raised</enum>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_10">
                     <property name="spacing">
@@ -2232,10 +2238,10 @@ border-bottom-right-radius:10px;
 }</string>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_13">
               <property name="spacing">
@@ -2294,7 +2300,7 @@ border-bottom-right-radius:10px;
                  </size>
                 </property>
                 <property name="toolButtonStyle">
-                 <enum>Qt::ToolButtonTextBesideIcon</enum>
+                 <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
                 </property>
                </widget>
               </item>
@@ -2304,7 +2310,7 @@ border-bottom-right-radius:10px;
            <item>
             <widget class="QStackedWidget" name="walkInOrWeb">
              <property name="currentIndex">
-              <number>0</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="walkIn">
               <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -2335,20 +2341,635 @@ border-bottom-right-radius:10px;
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>0</y>
-                    <width>83</width>
-                    <height>31</height>
+                    <y>-72</y>
+                    <width>862</width>
+                    <height>474</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_17">
                    <item>
-                    <widget class="QLabel" name="label_25">
+                    <widget class="QFrame" name="frame_12">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">color:rgb(0, 0, 0);</string>
+                      <string notr="true">#frame_12{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+#frame_12:hover{
+background-color:rgb(230, 230, 230);
+}</string>
                      </property>
-                     <property name="text">
-                      <string>WALKIN</string>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
                      </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_23">
+                      <item>
+                       <widget class="QLabel" name="label_30">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_31">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_36">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_37">
+                        <property name="maximumSize">
+                         <size>
+                          <width>15</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/delete.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_13">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_13{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+#frame_13:hover{
+background-color:rgb(230, 230, 230);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_24">
+                      <item>
+                       <widget class="QLabel" name="label_38">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_39">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_40">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_41">
+                        <property name="maximumSize">
+                         <size>
+                          <width>15</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/delete.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_14">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_14{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+#frame_14:hover{
+background-color:rgb(230, 230, 230);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_25">
+                      <item>
+                       <widget class="QLabel" name="label_42">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_43">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_44">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_45">
+                        <property name="maximumSize">
+                         <size>
+                          <width>15</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/delete.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_15">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_15{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+#frame_15:hover{
+background-color:rgb(230, 230, 230);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_26">
+                      <item>
+                       <widget class="QLabel" name="label_25">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_46">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_47">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_48">
+                        <property name="maximumSize">
+                         <size>
+                          <width>15</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/delete.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_16">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_16{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+#frame_16:hover{
+background-color:rgb(230, 230, 230);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_27">
+                      <item>
+                       <widget class="QLabel" name="label_49">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_50">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_51">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_52">
+                        <property name="maximumSize">
+                         <size>
+                          <width>15</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/delete.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_17">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_17{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+#frame_17:hover{
+background-color:rgb(230, 230, 230);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_28">
+                      <item>
+                       <widget class="QLabel" name="label_53">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_54">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_55">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_56">
+                        <property name="maximumSize">
+                         <size>
+                          <width>15</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/delete.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_18">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_18{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+#frame_18:hover{
+background-color:rgb(230, 230, 230);
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_29">
+                      <item>
+                       <widget class="QLabel" name="label_57">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_58">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_59">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_60">
+                        <property name="maximumSize">
+                         <size>
+                          <width>15</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/delete.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -2387,14 +3008,126 @@ border-bottom-right-radius:10px;
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>83</width>
-                    <height>31</height>
+                    <width>874</width>
+                    <height>402</height>
                    </rect>
                   </property>
                   <property name="styleSheet">
                    <string notr="true"/>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_18">
+                   <item>
+                    <widget class="QFrame" name="frame_20">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_20{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_30">
+                      <item>
+                       <widget class="QLabel" name="label_61">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_62">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_63">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_64">
+                        <property name="styleSheet">
+                         <string notr="true">#label_64{
+color: #272727;
+font: 20px Montserrat;
+border-radius: 10px;
+}
+#label_64:hover{
+background-color: #81BFDA;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Accept</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_65">
+                        <property name="styleSheet">
+                         <string notr="true">#label_65{
+color: #272727;
+font: 20px Montserrat;
+}
+#label_65:hover{
+background-color: #FCD597;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Decline</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
                    <item>
                     <widget class="QLabel" name="label_26">
                      <property name="styleSheet">
@@ -2453,10 +3186,10 @@ border-bottom-right-radius:10px;
 }</string>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+              <enum>QFrame::Shadow::Raised</enum>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
               <property name="leftMargin">
@@ -2487,10 +3220,10 @@ border-bottom-right-radius:10px;
               <item row="1" column="2">
                <widget class="QFrame" name="frame_8">
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_19">
                  <property name="spacing">
@@ -2569,10 +3302,10 @@ color:rgb(58, 58, 58);</string>
               <item row="0" column="2">
                <widget class="QFrame" name="frame_9">
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_14">
                  <property name="spacing">
@@ -2590,13 +3323,13 @@ color:rgb(58, 58, 58);</string>
                  <property name="bottomMargin">
                   <number>0</number>
                  </property>
-                 <item alignment="Qt::AlignRight">
+                 <item alignment="Qt::AlignmentFlag::AlignRight">
                   <widget class="QFrame" name="frame_10">
                    <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
+                    <enum>QFrame::Shape::StyledPanel</enum>
                    </property>
                    <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
+                    <enum>QFrame::Shadow::Raised</enum>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_15">
                     <property name="spacing">
@@ -2660,16 +3393,16 @@ color:rgb(58, 58, 58);</string>
                 </layout>
                </widget>
               </item>
-              <item row="0" column="0" alignment="Qt::AlignLeft">
+              <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
                <widget class="QFrame" name="profileBackfFrame">
                 <property name="styleSheet">
                  <string notr="true"/>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_17">
                  <property name="spacing">
@@ -2687,7 +3420,7 @@ color:rgb(58, 58, 58);</string>
                  <property name="bottomMargin">
                   <number>0</number>
                  </property>
-                 <item alignment="Qt::AlignLeft">
+                 <item alignment="Qt::AlignmentFlag::AlignLeft">
                   <widget class="QToolButton" name="profileBackbutton">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
@@ -2775,8 +3508,8 @@ color:rgb(58, 58, 58);</string>
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>812</width>
-                    <height>421</height>
+                    <width>401</width>
+                    <height>109</height>
                    </rect>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_6">
@@ -2792,7 +3525,7 @@ color:rgb(58, 58, 58);</string>
                    <property name="spacing">
                     <number>10</number>
                    </property>
-                   <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+                   <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop">
                     <widget class="QFrame" name="addPetButton">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2816,10 +3549,10 @@ color:rgb(58, 58, 58);</string>
 }</string>
                      </property>
                      <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
+                      <enum>QFrame::Shape::StyledPanel</enum>
                      </property>
                      <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
+                      <enum>QFrame::Shadow::Raised</enum>
                      </property>
                      <layout class="QHBoxLayout" name="horizontalLayout_16">
                       <property name="spacing">
@@ -2885,10 +3618,10 @@ color:#4F4F4F;</string>
                   </sizepolicy>
                  </property>
                  <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
+                  <enum>QFrame::Shape::StyledPanel</enum>
                  </property>
                  <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
+                  <enum>QFrame::Shadow::Raised</enum>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_18">
                   <property name="spacing">
@@ -2929,10 +3662,10 @@ color:rgb(39, 39, 39);</string>
                <item>
                 <widget class="QFrame" name="nameAndColorFrame">
                  <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
+                  <enum>QFrame::Shape::StyledPanel</enum>
                  </property>
                  <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
+                  <enum>QFrame::Shadow::Raised</enum>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_19">
                   <property name="spacing">
@@ -2953,10 +3686,10 @@ color:rgb(39, 39, 39);</string>
                   <item>
                    <widget class="QFrame" name="petNameFrame">
                     <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
+                     <enum>QFrame::Shape::StyledPanel</enum>
                     </property>
                     <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
+                     <enum>QFrame::Shadow::Raised</enum>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_21">
                      <property name="leftMargin">
@@ -3009,10 +3742,10 @@ color:rgb(39, 39, 39);</string>
                   <item>
                    <widget class="QFrame" name="petColorFrame">
                     <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
+                     <enum>QFrame::Shape::StyledPanel</enum>
                     </property>
                     <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
+                     <enum>QFrame::Shadow::Raised</enum>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_22">
                      <property name="leftMargin">
@@ -3068,10 +3801,10 @@ color:rgb(39, 39, 39);</string>
                <item>
                 <widget class="QFrame" name="breedAndSpeciesFrame">
                  <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
+                  <enum>QFrame::Shape::StyledPanel</enum>
                  </property>
                  <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
+                  <enum>QFrame::Shadow::Raised</enum>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_21">
                   <property name="spacing">
@@ -3092,10 +3825,10 @@ color:rgb(39, 39, 39);</string>
                   <item>
                    <widget class="QFrame" name="breedFrame">
                     <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
+                     <enum>QFrame::Shape::StyledPanel</enum>
                     </property>
                     <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
+                     <enum>QFrame::Shadow::Raised</enum>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_25">
                      <property name="spacing">
@@ -3151,10 +3884,10 @@ color:rgb(39, 39, 39);</string>
                   <item>
                    <widget class="QFrame" name="speciesFrame">
                     <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
+                     <enum>QFrame::Shape::StyledPanel</enum>
                     </property>
                     <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
+                     <enum>QFrame::Shadow::Raised</enum>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_26">
                      <property name="spacing">
@@ -3317,10 +4050,10 @@ QComboBox QLineEdit {
                <item>
                 <widget class="QFrame" name="frame_19">
                  <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
+                  <enum>QFrame::Shape::StyledPanel</enum>
                  </property>
                  <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
+                  <enum>QFrame::Shadow::Raised</enum>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_22">
                   <property name="spacing">
@@ -3341,10 +4074,10 @@ QComboBox QLineEdit {
                   <item>
                    <widget class="QFrame" name="ageFrame">
                     <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
+                     <enum>QFrame::Shape::StyledPanel</enum>
                     </property>
                     <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
+                     <enum>QFrame::Shadow::Raised</enum>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_27">
                      <property name="leftMargin">
@@ -3397,10 +4130,10 @@ color:rgb(39, 39, 39);</string>
                   <item>
                    <widget class="QFrame" name="sexFrame">
                     <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
+                     <enum>QFrame::Shape::StyledPanel</enum>
                     </property>
                     <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
+                     <enum>QFrame::Shadow::Raised</enum>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_28">
                      <property name="spacing">
@@ -3555,13 +4288,13 @@ QComboBox QLineEdit {
                  </layout>
                 </widget>
                </item>
-               <item alignment="Qt::AlignHCenter">
+               <item alignment="Qt::AlignmentFlag::AlignHCenter">
                 <widget class="QFrame" name="frame_11">
                  <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
+                  <enum>QFrame::Shape::StyledPanel</enum>
                  </property>
                  <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
+                  <enum>QFrame::Shadow::Raised</enum>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_20">
                   <property name="spacing">
