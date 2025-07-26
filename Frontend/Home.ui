@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1280</width>
-    <height>724</height>
+    <height>720</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -579,7 +579,7 @@ QToolButton:hover{
           <enum>QFrame::Shape::NoFrame</enum>
          </property>
          <property name="currentIndex">
-          <number>3</number>
+          <number>4</number>
          </property>
          <widget class="QWidget" name="homepage">
           <property name="styleSheet">
@@ -1921,8 +1921,8 @@ border-bottom-right-radius:10px;
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>72</width>
-                <height>16</height>
+                <width>900</width>
+                <height>516</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -3795,6 +3795,129 @@ border-radius: 10px;
            </item>
           </layout>
          </widget>
+         <widget class="QWidget" name="page_2">
+          <widget class="QFrame" name="frame_27">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>901</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: transparent;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Shadow::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_96">
+              <property name="styleSheet">
+               <string notr="true">font: Bold 25pt &quot;Rubik Mono One&quot;;
+color:rgb(39, 39, 39);
+</string>
+              </property>
+              <property name="text">
+               <string>Petmate Animal Clinic</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_26">
+              <property name="maximumSize">
+               <size>
+                <width>140</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="resource.qrc">:/images/image/petmateLogo.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QFrame" name="frame_28">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>90</y>
+             <width>851</width>
+             <height>471</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Shadow::Raised</enum>
+           </property>
+           <widget class="QLabel" name="label_97">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>160</y>
+              <width>49</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_98">
+            <property name="geometry">
+             <rect>
+              <x>230</x>
+              <y>200</y>
+              <width>49</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_99">
+            <property name="geometry">
+             <rect>
+              <x>300</x>
+              <y>140</y>
+              <width>49</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_100">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>240</y>
+              <width>49</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page"/>
          <widget class="QWidget" name="SchedVax">
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
