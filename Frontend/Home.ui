@@ -61,23 +61,8 @@
 }
 </string>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_3">
-    <property name="spacing">
-     <number>20</number>
-    </property>
-    <property name="leftMargin">
-     <number>15</number>
-    </property>
-    <property name="topMargin">
-     <number>15</number>
-    </property>
-    <property name="rightMargin">
-     <number>15</number>
-    </property>
-    <property name="bottomMargin">
-     <number>15</number>
-    </property>
-    <item>
+   <layout class="QGridLayout" name="gridLayout_7">
+    <item row="0" column="0">
      <widget class="QFrame" name="sideNav">
       <property name="enabled">
        <bool>true</bool>
@@ -563,7 +548,7 @@ QToolButton:hover{
       </layout>
      </widget>
     </item>
-    <item>
+    <item row="0" column="1">
      <widget class="QFrame" name="MainContent">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -1936,8 +1921,8 @@ border-bottom-right-radius:10px;
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>100</width>
-                <height>30</height>
+                <width>72</width>
+                <height>16</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -2341,8 +2326,8 @@ border-bottom-right-radius:10px;
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-72</y>
-                    <width>862</width>
+                    <y>0</y>
+                    <width>888</width>
                     <height>474</height>
                    </rect>
                   </property>
@@ -3008,8 +2993,8 @@ font: 20px Montserrat;</string>
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>874</width>
-                    <height>402</height>
+                    <width>888</width>
+                    <height>472</height>
                    </rect>
                   </property>
                   <property name="styleSheet">
@@ -3118,7 +3103,7 @@ border-radius: 10px;
 }</string>
                         </property>
                         <property name="text">
-                         <string>Decline</string>
+                         <string>Review</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -3129,13 +3114,675 @@ border-radius: 10px;
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_26">
+                    <widget class="QFrame" name="frame_21">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">color:rgb(0, 0, 0);</string>
+                      <string notr="true">#frame_21{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+</string>
                      </property>
-                     <property name="text">
-                      <string>Website</string>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
                      </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_31">
+                      <item>
+                       <widget class="QLabel" name="label_66">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_67">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_68">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_69">
+                        <property name="styleSheet">
+                         <string notr="true">#label_69{
+color: #272727;
+font: 20px Montserrat;
+border-radius: 10px;
+}
+#label_69:hover{
+background-color: #81BFDA;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Accept</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_70">
+                        <property name="styleSheet">
+                         <string notr="true">#label_70{
+color: #272727;
+font: 20px Montserrat;
+}
+#label_70:hover{
+background-color: #FCD597;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Review</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_22">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_22{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_32">
+                      <item>
+                       <widget class="QLabel" name="label_71">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_72">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_73">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_74">
+                        <property name="styleSheet">
+                         <string notr="true">#label_74{
+color: #272727;
+font: 20px Montserrat;
+border-radius: 10px;
+}
+#label_74:hover{
+background-color: #81BFDA;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Accept</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_75">
+                        <property name="styleSheet">
+                         <string notr="true">#label_75{
+color: #272727;
+font: 20px Montserrat;
+}
+#label_75:hover{
+background-color: #FCD597;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Review</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_23">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_23{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_33">
+                      <item>
+                       <widget class="QLabel" name="label_76">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_77">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_78">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_79">
+                        <property name="styleSheet">
+                         <string notr="true">#label_79{
+color: #272727;
+font: 20px Montserrat;
+border-radius: 10px;
+}
+#label_79:hover{
+background-color: #81BFDA;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Accept</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_80">
+                        <property name="styleSheet">
+                         <string notr="true">#label_80{
+color: #272727;
+font: 20px Montserrat;
+}
+#label_80:hover{
+background-color: #FCD597;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Review</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_24">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_24{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_34">
+                      <item>
+                       <widget class="QLabel" name="label_81">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_82">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_83">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_84">
+                        <property name="styleSheet">
+                         <string notr="true">#label_84{
+color: #272727;
+font: 20px Montserrat;
+border-radius: 10px;
+}
+#label_84:hover{
+background-color: #81BFDA;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Accept</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_85">
+                        <property name="styleSheet">
+                         <string notr="true">#label_85{
+color: #272727;
+font: 20px Montserrat;
+}
+#label_85:hover{
+background-color: #FCD597;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Review</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_25">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_25{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_35">
+                      <item>
+                       <widget class="QLabel" name="label_86">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_87">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_88">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_89">
+                        <property name="styleSheet">
+                         <string notr="true">#label_89{
+color: #272727;
+font: 20px Montserrat;
+border-radius: 10px;
+}
+#label_89:hover{
+background-color: #81BFDA;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Accept</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_90">
+                        <property name="styleSheet">
+                         <string notr="true">#label_90{
+color: #272727;
+font: 20px Montserrat;
+}
+#label_90:hover{
+background-color: #FCD597;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Review</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_26">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#frame_25{
+	border-right: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+    border-radius: 10px;
+}
+</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Shadow::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_36">
+                      <item>
+                       <widget class="QLabel" name="label_91">
+                        <property name="maximumSize">
+                         <size>
+                          <width>40</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="resource.qrc">:/Icons/Icons/UserIcon.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_92">
+                        <property name="styleSheet">
+                         <string notr="true">color: #272727;
+font: bold 20px Montserrat;
+</string>
+                        </property>
+                        <property name="text">
+                         <string>Robert Moleno</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_93">
+                        <property name="styleSheet">
+                         <string notr="true">color: gray;
+font: 20px Montserrat;</string>
+                        </property>
+                        <property name="text">
+                         <string>Date and Time</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_94">
+                        <property name="styleSheet">
+                         <string notr="true">#label_94{
+color: #272727;
+font: 20px Montserrat;
+border-radius: 10px;
+}
+#label_94:hover{
+background-color: #81BFDA;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Accept</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_95">
+                        <property name="styleSheet">
+                         <string notr="true">#label_95{
+color: #272727;
+font: 20px Montserrat;
+}
+#label_95:hover{
+background-color: #FCD597;
+border-radius: 10px;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Review</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -3508,8 +4155,8 @@ color:rgb(58, 58, 58);</string>
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>401</width>
-                    <height>109</height>
+                    <width>838</width>
+                    <height>451</height>
                    </rect>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_6">
